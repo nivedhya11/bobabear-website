@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="NIVEDHYA11 HOSPITALITY PRIVATE LIMITED Official Stamp">
+  <title>Boba Bear Brand Stamp — NIVEDHYA11 HOSPITALITY PRIVATE LIMITED</title>
+
+  <!-- Outer ring -->
+  <circle cx="60" cy="60" r="56" fill="none" stroke="#ffffff" stroke-width="2.5"/>
+  <!-- Inner ring -->
+  <circle cx="60" cy="60" r="49" fill="none" stroke="#ffffff" stroke-width="1"/>
+
+  <!-- Curved top text: NIVEDHYA11 HOSPITALITY -->
+  <path id="topArc" d="M 14,60 A 46,46 0 0,1 106,60" fill="none"/>
+  <text font-family="'Nunito', 'Arial', sans-serif" font-size="7.5" font-weight="900"
+        fill="#ffffff" letter-spacing="2">
+    <textPath href="#topArc" startOffset="50%" text-anchor="middle">
+      NIVEDHYA11 HOSPITALITY
+    </textPath>
+  </text>
+
+  <!-- Curved bottom text: PRIVATE LIMITED -->
+  <path id="bottomArc" d="M 14,62 A 46,46 0 0,0 106,62" fill="none"/>
+  <text font-family="'Nunito', 'Arial', sans-serif" font-size="7.5" font-weight="900"
+        fill="#ffffff" letter-spacing="2.5">
+    <textPath href="#bottomArc" startOffset="50%" text-anchor="middle">
+      PRIVATE LIMITED
+    </textPath>
+  </text>
+
+  <!-- Bear face (center icon) -->
+  <!-- Left ear -->
+  <circle cx="50" cy="50" r="6" fill="#ffffff"/>
+  <circle cx="50" cy="50" r="3.5" fill="none" stroke="#ffffff" stroke-width="0"/>
+  <!-- Right ear -->
+  <circle cx="70" cy="50" r="6" fill="#ffffff"/>
+  <!-- Head -->
+  <circle cx="60" cy="62" r="14" fill="#ffffff"/>
+  <!-- Eyes (negative space cutout) -->
+  <circle cx="55.5" cy="59" r="2" fill="none" stroke="#000" stroke-width="0"/>
+  <circle cx="55.5" cy="59" r="1.8" fill="#1A2210"/>
+  <circle cx="64.5" cy="59" r="1.8" fill="#1A2210"/>
+  <!-- Snout -->
+  <ellipse cx="60" cy="65" rx="4.5" ry="3" fill="#d0d0d0"/>
+  <!-- Nose -->
+  <ellipse cx="60" cy="63.5" rx="1.8" ry="1.1" fill="#1A2210"/>
+
+  <!-- Stars / decorative dots between text and bear -->
+  <circle cx="36" cy="62" r="1.5" fill="#ffffff" opacity="0.6"/>
+  <circle cx="84" cy="62" r="1.5" fill="#ffffff" opacity="0.6"/>
+
+  <!-- Horizontal rule lines flanking the brand year -->
+  <line x1="30" y1="78" x2="50" y2="78" stroke="#ffffff" stroke-width="0.8" opacity="0.6"/>
+  <line x1="70" y1="78" x2="90" y2="78" stroke="#ffffff" stroke-width="0.8" opacity="0.6"/>
+  <text x="60" y="80.5"
+        font-family="'Nunito', 'Arial', sans-serif"
+        font-size="6.5"
+        font-weight="900"
+        fill="#ffffff"
+        text-anchor="middle"
+        letter-spacing="1.5"
+        opacity="0.85">EST. 2024</text>
+
+</svg>

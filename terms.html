@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boba Bear — Terms of Service</title>
+  <meta name="description" content="Terms of Service for Boba Bear." />
+  <meta name="theme-color" content="#1A2210" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Nunito:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #1A2210;
+      --green: #A8D832;
+      --gold: #F5A623;
+      --white: #F4F0E6;
+      --cream: #F4F0E6;
+      --ink: #243018;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--bg);
+      color: var(--white);
+      font-family: 'Nunito', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 80;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      background: rgba(26, 34, 16, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(168, 216, 50, 0.15);
+    }
+
+    .topbar-logo img {
+      width: auto;
+      height: 34px;
+      display: block;
+    }
+
+    .topbar-tag {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--gold);
+      background: rgba(245, 166, 35, 0.1);
+      border: 1px solid rgba(245, 166, 35, 0.35);
+      padding: 4px 10px;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .page-hero {
+      position: relative;
+      z-index: 1;
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 56px 20px 36px;
+      text-align: center;
+    }
+
+    .section-label {
+      font-size: 0.72rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--green);
+      margin-bottom: 12px;
+    }
+
+    .page-title {
+      font-family: 'Luckiest Guy', cursive;
+      font-size: clamp(2.6rem, 11vw, 4.2rem);
+      color: var(--gold);
+      line-height: 0.95;
+      letter-spacing: 0.04em;
+      margin-bottom: 14px;
+      text-shadow: 0 4px 0 rgba(0,0,0,0.35), 0 0 32px rgba(245,166,35,0.18);
+    }
+
+    .page-subtitle {
+      color: var(--green);
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .legal-band {
+      position: relative;
+      z-index: 1;
+      background: var(--cream);
+      color: var(--ink);
+      border-top: 1px solid rgba(168,216,50,0.12);
+      border-bottom: 1px solid rgba(168,216,50,0.12);
+    }
+
+    .legal-shell {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 40px 20px 56px;
+    }
+
+    .legal-card {
+      background: rgba(255,255,255,0.42);
+      border: 1px solid rgba(36,48,24,0.08);
+      border-radius: 24px;
+      padding: 28px 22px;
+      box-shadow: 0 18px 40px rgba(26,34,16,0.08);
+    }
+
+    .legal-card h2,
+    .legal-card h3 {
+      font-family: 'Luckiest Guy', cursive;
+      letter-spacing: 0.04em;
+      color: var(--bg);
+      margin-bottom: 12px;
+    }
+
+    .legal-card h2 {
+      font-size: 1.8rem;
+      line-height: 1;
+    }
+
+    .legal-card h3 {
+      font-size: 1.1rem;
+      margin-top: 28px;
+    }
+
+    .legal-card p,
+    .legal-card li {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: rgba(36,48,24,0.9);
+    }
+
+    .legal-card p + p,
+    .legal-card ul,
+    .legal-card ol {
+      margin-top: 16px;
+    }
+
+    .legal-card ul,
+    .legal-card ol {
+      padding-left: 20px;
+    }
+
+    .placeholder-note {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(168,216,50,0.16);
+      color: var(--bg);
+      font-size: 0.72rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .footer {
+      position: relative;
+      z-index: 1;
+      background: var(--bg);
+      border-top: 1px solid rgba(168,216,50,0.12);
+    }
+
+    .footer-inner {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 36px 20px 30px;
+    }
+
+    .footer-brand-block {
+      text-align: center;
+      margin-bottom: 22px;
+    }
+
+    .footer-logo {
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 1.8rem;
+      color: var(--green);
+      letter-spacing: 0.06em;
+      margin-bottom: 4px;
+    }
+
+    .footer-logo span { color: var(--gold); }
+
+    .footer-tagline {
+      font-size: 0.78rem;
+      color: rgba(244,240,230,0.32);
+      font-weight: 600;
+    }
+
+    .footer-hr {
+      border: none;
+      border-top: 1px solid rgba(168,216,50,0.1);
+      margin: 0 0 22px;
+    }
+
+    .footer-legal-block { text-align: center; }
+
+    .footer-stamp-wrap { margin-bottom: 16px; }
+
+    .footer-stamp {
+      width: 88px;
+      height: auto;
+      margin: 0 auto;
+      opacity: 0.9;
+    }
+
+    .footer-entity-text {
+      font-size: 0.75rem;
+      color: rgba(244,240,230,0.52);
+      font-weight: 600;
+      line-height: 1.65;
+      margin-bottom: 5px;
+    }
+
+    .footer-entity-text strong {
+      color: rgba(244,240,230,0.78);
+      font-weight: 900;
+    }
+
+    .footer-address-text {
+      font-size: 0.72rem;
+      color: rgba(244,240,230,0.38);
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+
+    .footer-policy-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .footer-policy-link {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--green);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: rgba(168,216,50,0.35);
+    }
+
+    .footer-policy-sep {
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background: rgba(244,240,230,0.25);
+      flex-shrink: 0;
+    }
+
+    .footer-copyright {
+      font-size: 0.63rem;
+      color: rgba(244,240,230,0.2);
+      letter-spacing: 0.05em;
+      line-height: 1.6;
+    }
+
+    @media (min-width: 600px) {
+      body { font-size: 17px; }
+      .legal-shell { padding: 48px 24px 64px; }
+      .legal-card { padding: 36px 34px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="topbar">
+    <div class="topbar-logo">
+      <a href="index.html" aria-label="Boba Bear home">
+        <img src="assets/images/logos/logo-full.svg" alt="Boba Bear Official Logo" />
+      </a>
+    </div>
+    <div class="topbar-tag">Now Open</div>
+  </nav>
+
+  <header class="page-hero">
+    <div class="section-label">✦ Legal</div>
+    <h1 class="page-title">Terms of<br />Service</h1>
+    <p class="page-subtitle">Built with the same Boba Bear look, ready for your final copy.</p>
+  </header>
+
+  <main class="legal-band">
+    <div class="legal-shell">
+      <article class="legal-card">
+        <h2>Terms of Service</h2>
+        <p><strong>Last Updated:</strong> April 11, 2026</p>
+
+        <h3>1. General</h3>
+        <p>By accessing the Boba Bear website or placing an order via our WhatsApp Business channel, you agree to be bound by these Terms of Service. Boba Bear is a registered brand operating under Nivedhya11 Hospitality Private Limited.</p>
+
+        <h3>2. Operating Model (Cloud Kitchen)</h3>
+        <p>Boba Bear operates exclusively as a Delivery-Only Cloud Kitchen. We do not offer dine-in or direct customer pickup at our kitchen facility to maintain hygiene and operational efficiency. All orders must be placed digitally.</p>
+
+        <h3>3. Orders and Pricing</h3>
+        <ul>
+          <li>All menu prices are listed in INR (₹) and are subject to change.</li>
+          <li>We reserve the right to cancel orders if an item is out of stock or if the delivery location falls outside our serviceable radius.</li>
+          <li>Images on this website are for aesthetic representation; actual product presentation may vary slightly due to delivery transit.</li>
+        </ul>
+
+        <h3>4. WhatsApp Ordering</h3>
+        <p>Orders placed directly via our WhatsApp Business API are subject to confirmation. An order is only considered accepted once our automated system or staff confirms it and payment is processed.</p>
+
+        <h3>5. Intellectual Property</h3>
+        <p>The Boba Bear logo, mascot ("Vinyl Toy Bear"), "Aurora Palette" aesthetics, and brand taglines ("Stay Dreaming", "Taste the Drop") are the intellectual property of Nivedhya11 Hospitality Private Limited. Unauthorized reproduction is strictly prohibited.</p>
+
+        <h3>6. Contact</h3>
+        <p>Nivedhya11 Hospitality Private Limited<br />Dehradun, Uttarakhand, India<br />Email: nivedhya11hospitality@gmail.com</p>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand-block">
+        <div class="footer-logo">Boba<span>Bear</span></div>
+        <div class="footer-tagline">S-Tier Boba. K-Street Bites. Stay Dreaming.</div>
+      </div>
+
+      <hr class="footer-hr" />
+
+      <div class="footer-legal-block">
+        <div class="footer-stamp-wrap">
+          <img src="assets/images/logos/stamp-white.svg"
+               alt="NIVEDHYA11 HOSPITALITY PRIVATE LIMITED Official Brand Stamp"
+               loading="lazy"
+               class="footer-stamp" />
+        </div>
+        <p class="footer-entity-text">
+          Boba Bear is a brand owned and operated by<br />
+          <strong>NIVEDHYA11 HOSPITALITY PRIVATE LIMITED.</strong>
+        </p>
+        <p class="footer-address-text">📍 Dehradun, Uttarakhand (Cloud Kitchen — Delivery Only. No Dine-In).</p>
+
+        <div class="footer-policy-links">
+          <a href="index.html" class="footer-policy-link">Home</a>
+          <span class="footer-policy-sep" aria-hidden="true"></span>
+          <a href="privacy.html" class="footer-policy-link">Privacy Policy</a>
+          <span class="footer-policy-sep" aria-hidden="true"></span>
+          <a href="terms.html" class="footer-policy-link">Terms of Service</a>
+        </div>
+
+        <p class="footer-copyright">
+          &copy; 2025 NIVEDHYA11 HOSPITALITY PRIVATE LIMITED.<br />All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,3261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boba Bear | Premium Bubble Tea & K-Street Food Delivery in Dehradun</title>
+
+  <!-- SEO & GitHub Pages -->
+  <meta name="description" content="For the Unbothered. S-Tier Sips and K-Street Drip delivered directly to you. Order premium bubble tea, Korean corn dogs, and viral spicy ramyun from Dehradun's exclusive Indo-Korean cloud kitchen." />
+  <meta name="keywords" content="boba tea Dehradun, bubble tea near me, Korean corn dog, spicy ramyun Dehradun, K-pop cafe, cloud kitchen, food delivery Dehradun, Nivedhya11 Hospitality" />
+  <meta name="author" content="Boba Bear — NIVEDHYA11 HOSPITALITY PRIVATE LIMITED" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#1A2210" />
+
+  <!-- Open Graph (WhatsApp / Meta preview) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Boba Bear | S-Tier Sips. K-Street Drip." />
+  <meta property="og:description" content="Dehradun's exclusive Indo-Korean delivery kitchen. Order now via Swiggy, Zomato, or WhatsApp." />
+  <meta property="og:image" content="assets/images/ui/hero-digital-mascot.png" />
+  <meta property="og:image:alt" content="Boba Bear hero mascot for premium bubble tea and K-street food delivery in Dehradun" />
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:site_name" content="Boba Bear" />
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Boba Bear | S-Tier Sips. K-Street Drip." />
+  <meta name="twitter:description" content="Dehradun's exclusive Indo-Korean delivery kitchen. Order now via Swiggy, Zomato, or WhatsApp." />
+  <meta name="twitter:image" content="assets/images/ui/hero-digital-mascot.png" />
+  <meta name="twitter:image:alt" content="Boba Bear hero mascot for premium bubble tea and K-street food delivery in Dehradun" />
+
+  <!-- WhatsApp API business compliance -->
+  <meta name="business:contact_data:street_address" content="Dehradun, Uttarakhand, India" />
+  <meta name="business:contact_data:country_name" content="India" />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["FoodEstablishment", "DeliveryRestaurant"],
+      "name": "Boba Bear",
+      "alternateName": "Boba Bear Dehradun",
+      "description": "Boba Bear is a delivery-only Indo-Korean cloud kitchen in Dehradun, Uttarakhand, India. No dine-in or walk-in service is available.",
+      "image": "assets/images/logos/logo-full.svg",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "Nivedhya11 Hospitality Private Limited"
+      },
+      "brand": {
+        "@type": "Brand",
+        "name": "Boba Bear"
+      },
+      "servesCuisine": [
+        "Korean",
+        "Bubble Tea",
+        "Street Food"
+      ],
+      "priceRange": "₹₹",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Dehradun",
+        "addressRegion": "Uttarakhand",
+        "addressCountry": "India"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Dehradun"
+      },
+      "serviceArea": {
+        "@type": "City",
+        "name": "Dehradun"
+      },
+      "acceptsReservations": false,
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Boba Bear Main Menu",
+        "itemListElement": [
+          {
+            "@type": "OfferCatalog",
+            "name": "K-Drama Combos"
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Fries, Bites & Corn Dogs"
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "The Boba Bear Beverage Studio"
+          }
+        ]
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Nunito:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <style>
+    /* ============================================================
+       TOKENS & RESET
+    ============================================================ */
+    :root {
+      --bg:        #1A2210;
+      --green:     #A8D832;
+      --gold:      #F5A623;
+      --white:     #F4F0E6;
+      --swiggy:    #FC8019;
+      --zomato:    #E23744;
+      --whatsapp:  #25D366;
+      --card-bg:   #222E14;
+      --dock-h:    84px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--bg);
+      color: var(--white);
+      font-family: 'Nunito', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      padding-bottom: calc(var(--dock-h) + 24px);
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, .heading {
+      font-family: 'Luckiest Guy', cursive;
+      letter-spacing: 0.04em;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    img { display: block; max-width: 100%; }
+
+    /* ============================================================
+       NOISE TEXTURE OVERLAY
+    ============================================================ */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ============================================================
+       NAV BAR (top)
+    ============================================================ */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 80;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      background: rgba(26, 34, 16, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(168, 216, 50, 0.15);
+    }
+
+    .topbar-logo {
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 1.5rem;
+      color: var(--green);
+      letter-spacing: 0.06em;
+    }
+
+    .topbar-logo span { color: var(--gold); }
+
+    .topbar-tag {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--gold);
+      background: rgba(245, 166, 35, 0.1);
+      border: 1px solid rgba(245, 166, 35, 0.35);
+      padding: 4px 10px;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    /* ============================================================
+       SECTION WRAPPER
+    ============================================================ */
+    .section {
+      position: relative;
+      z-index: 1;
+      padding: 60px 20px;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 0.72rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--green);
+      margin-bottom: 10px;
+    }
+
+    /* ============================================================
+       HERO
+    ============================================================ */
+    .hero {
+      padding-top: 48px;
+      padding-bottom: 48px;
+      text-align: center;
+    }
+
+    /* Die-cut sticker frame */
+    .hero-sticker-frame {
+      position: relative;
+      display: inline-block;
+      margin: 0 auto 36px;
+    }
+
+    /* Outer glow ring — mimics sticker bleed */
+    .hero-sticker-frame::before {
+      content: '';
+      position: absolute;
+      inset: -10px;
+      border-radius: 38% 62% 55% 45% / 42% 48% 52% 58%;
+      background: var(--green);
+      z-index: -1;
+      filter: blur(0px);
+    }
+
+    /* White die-cut edge */
+    .hero-sticker-frame::after {
+      content: '';
+      position: absolute;
+      inset: -6px;
+      border-radius: 38% 62% 55% 45% / 42% 48% 52% 58%;
+      background: #fff;
+      z-index: -1;
+    }
+
+    .hero-mascot {
+      width: 240px;
+      height: 240px;
+      border-radius: 36% 64% 52% 48% / 40% 46% 54% 60%;
+      background: linear-gradient(145deg, #2a3a18 0%, #1a2a0e 60%, #0f1a08 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      position: relative;
+      overflow: hidden;
+      border: 2px solid var(--green);
+    }
+
+    .hero-mascot::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 35% 30%, rgba(168,216,50,0.12) 0%, transparent 65%);
+    }
+
+    .mascot-bear-icon {
+      font-size: 72px;
+      line-height: 1;
+      filter: drop-shadow(0 4px 16px rgba(168,216,50,0.4));
+    }
+
+    .mascot-label {
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 0.78rem;
+      color: var(--green);
+      letter-spacing: 0.12em;
+      opacity: 0.85;
+    }
+
+    .hero-headline {
+      font-family: 'Luckiest Guy', cursive;
+      font-size: clamp(3.2rem, 14vw, 5.5rem);
+      color: var(--gold);
+      line-height: 0.95;
+      letter-spacing: 0.03em;
+      text-shadow: 0 4px 0 rgba(0,0,0,0.4), 0 0 40px rgba(245,166,35,0.25);
+      margin-bottom: 16px;
+    }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--green);
+      letter-spacing: 0.04em;
+      margin-bottom: 28px;
+    }
+
+    .hero-badges {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      cursor: default;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    .badge-outline {
+      border: 1.5px solid var(--green);
+      color: var(--green);
+    }
+
+    .badge-fill {
+      border: 1.5px solid var(--green);
+      color: var(--green);
+      background: transparent;
+    }
+
+    /* ============================================================
+       MARQUEE STRIP
+    ============================================================ */
+    .marquee-wrap {
+      overflow: hidden;
+      border-top: 1px solid rgba(168,216,50,0.2);
+      border-bottom: 1px solid rgba(168,216,50,0.2);
+      background: rgba(168,216,50,0.06);
+      padding: 12px 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .marquee-track {
+      display: flex;
+      gap: 0;
+      width: max-content;
+      animation: marquee 22s linear infinite;
+    }
+
+    .marquee-item {
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 0.85rem;
+      color: var(--gold);
+      letter-spacing: 0.12em;
+      padding: 0 24px;
+      white-space: nowrap;
+    }
+
+    .marquee-dot {
+      color: var(--green);
+      font-size: 0.6rem;
+      align-self: center;
+    }
+
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    /* ============================================================
+       MENU SECTION
+    ============================================================ */
+    .menu-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .menu-card {
+      background: var(--card-bg);
+      border: 1px solid rgba(168,216,50,0.15);
+      border-radius: 18px;
+      padding: 20px 16px 16px;
+      text-align: center;
+      transition: border-color 0.2s, transform 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .menu-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--green), transparent);
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    .menu-card:active { transform: scale(0.97); border-color: var(--green); }
+    .menu-card:active::before { opacity: 1; }
+
+    .menu-card-emoji {
+      font-size: 2.6rem;
+      margin-bottom: 10px;
+      filter: drop-shadow(0 2px 8px rgba(168,216,50,0.3));
+    }
+
+    .menu-card-name {
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 0.95rem;
+      color: var(--gold);
+      letter-spacing: 0.05em;
+      margin-bottom: 4px;
+    }
+
+    .menu-card-desc {
+      font-size: 0.7rem;
+      color: rgba(244,240,230,0.55);
+      line-height: 1.4;
+    }
+
+    .menu-card-price {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 0.8rem;
+      font-weight: 900;
+      color: var(--green);
+    }
+
+    /* ============================================================
+       VIBES / ABOUT SECTION
+    ============================================================ */
+    .vibe-section {
+      background: linear-gradient(180deg, transparent 0%, rgba(168,216,50,0.04) 50%, transparent 100%);
+    }
+
+    .vibe-card {
+      background: var(--card-bg);
+      border: 1px solid rgba(168,216,50,0.15);
+      border-radius: 20px;
+      padding: 28px 24px;
+      margin-top: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .vibe-card::after {
+      content: '"';
+      position: absolute;
+      top: -10px;
+      right: 20px;
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 8rem;
+      color: rgba(168,216,50,0.06);
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .vibe-text {
+      font-size: 1.05rem;
+      font-weight: 600;
+      line-height: 1.7;
+      color: rgba(244,240,230,0.85);
+    }
+
+    .vibe-text strong { color: var(--gold); }
+
+    .vibe-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .stat-box {
+      background: var(--card-bg);
+      border: 1px solid rgba(168,216,50,0.15);
+      border-radius: 14px;
+      padding: 18px 10px;
+      text-align: center;
+    }
+
+    .stat-number {
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 1.8rem;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .stat-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--green);
+    }
+
+    /* ============================================================
+       LOCATION SECTION
+    ============================================================ */
+    .location-card {
+      background: var(--card-bg);
+      border: 1px solid rgba(168,216,50,0.2);
+      border-radius: 20px;
+      padding: 24px 20px;
+      margin-top: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .loc-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .loc-icon {
+      font-size: 1.4rem;
+      line-height: 1;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .loc-title {
+      font-size: 0.7rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--green);
+      margin-bottom: 2px;
+    }
+
+    .loc-value {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--white);
+    }
+
+    .map-placeholder {
+      width: 100%;
+      height: 140px;
+      background: linear-gradient(135deg, #1e2c12, #162010);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px dashed rgba(168,216,50,0.25);
+      gap: 8px;
+      color: rgba(168,216,50,0.5);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    .footer {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 32px 20px 20px;
+      border-top: 1px solid rgba(168,216,50,0.1);
+    }
+
+    .footer-logo {
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 1.8rem;
+      color: var(--green);
+      letter-spacing: 0.06em;
+      margin-bottom: 6px;
+    }
+
+    .footer-logo span { color: var(--gold); }
+
+    .footer-tagline {
+      font-size: 0.78rem;
+      color: rgba(244,240,230,0.4);
+      font-weight: 600;
+    }
+
+    /* ============================================================
+       FLOATING DOCK — THE COMMAND CENTER
+    ============================================================ */
+    .dock {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 10px 14px 16px;
+      background: rgba(16, 22, 9, 0.92);
+      backdrop-filter: blur(20px) saturate(1.4);
+      border-top: 1px solid rgba(168,216,50,0.18);
+      box-shadow: 0 -8px 32px rgba(0,0,0,0.5);
+    }
+
+    .dock-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 8px;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    .dock-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      padding: 10px 6px;
+      border-radius: 14px;
+      border: none;
+      cursor: pointer;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 900;
+      font-size: 0.68rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: transform 0.15s, filter 0.15s, box-shadow 0.15s;
+      -webkit-tap-highlight-color: transparent;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .dock-btn:active {
+      transform: scale(0.94);
+      filter: brightness(1.15);
+    }
+
+    .dock-btn-icon {
+      font-size: 1.4rem;
+      line-height: 1;
+    }
+
+    /* Swiggy */
+    .dock-btn--swiggy {
+      background: linear-gradient(145deg, #ff9640, var(--swiggy));
+      box-shadow: 0 4px 18px rgba(252,128,25,0.45), inset 0 1px 0 rgba(255,255,255,0.18);
+    }
+
+    /* Zomato */
+    .dock-btn--zomato {
+      background: linear-gradient(145deg, #f0566a, var(--zomato));
+      box-shadow: 0 4px 18px rgba(226,55,68,0.45), inset 0 1px 0 rgba(255,255,255,0.18);
+    }
+
+    /* WhatsApp */
+    .dock-btn--whatsapp {
+      background: linear-gradient(145deg, #3de87a, var(--whatsapp));
+      box-shadow: 0 4px 18px rgba(37,211,102,0.4), inset 0 1px 0 rgba(255,255,255,0.18);
+    }
+
+    /* ============================================================
+       SECTION DIVIDER
+    ============================================================ */
+    .divider {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 0 20px;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    .divider-line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(168,216,50,0.25), transparent);
+    }
+
+    .divider-icon { font-size: 1rem; }
+
+    /* ============================================================
+       UTILITIES
+    ============================================================ */
+    .text-green  { color: var(--green); }
+    .text-gold   { color: var(--gold); }
+    .mt-16 { margin-top: 16px; }
+
+    /* ============================================================
+       DESKTOP TWEAKS (≥600px)
+    ============================================================ */
+    @media (min-width: 600px) {
+      body { font-size: 17px; }
+
+      .hero-mascot { width: 280px; height: 280px; }
+      .hero-headline { font-size: 5.5rem; }
+
+      .dock-btn { font-size: 0.78rem; padding: 12px 10px; gap: 5px; }
+      .dock-btn-icon { font-size: 1.6rem; }
+    }
+
+    /* ============================================================
+       MENU HIGHLIGHTS — STREETWEAR DROP SYSTEM
+    ============================================================ */
+
+    /* Drop Band: full-width section that bleeds edge-to-edge */
+    .drop-band {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+    }
+
+    .drop-band-inner {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 56px 20px 60px;
+    }
+
+    /* Sky band — light bg, dark text */
+    .drop-band--sky {
+      background-color: #A8D8F5;
+      color: #1A2210;
+    }
+
+    .drop-band--sky .section-label { color: #0e5c96; }
+
+    .drop-band--sky .drop-section-heading { color: #1A2210; }
+
+    /* Dark band — subtle top/bottom rule to mark it as a zone */
+    .drop-band--dark {
+      background: linear-gradient(180deg,
+        rgba(168,216,50,0.04) 0%,
+        transparent 30%,
+        transparent 70%,
+        rgba(168,216,50,0.04) 100%);
+      border-top: 1px solid rgba(168,216,50,0.12);
+      border-bottom: 1px solid rgba(168,216,50,0.12);
+    }
+
+    /* ── Drop Number Badge ── */
+    .drop-section-number {
+      display: inline-block;
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      padding: 4px 12px;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+
+    .drop-band--sky .drop-section-number {
+      background: #1A2210;
+      color: var(--green);
+    }
+
+    .drop-band--dark .drop-section-number {
+      background: var(--green);
+      color: #1A2210;
+    }
+
+    /* ── Drop Section Heading ── */
+    .drop-section-heading {
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 2.4rem;
+      line-height: 0.95;
+      letter-spacing: 0.04em;
+      margin-bottom: 6px;
+    }
+
+    .drop-band--dark .drop-section-heading { color: var(--gold); }
+
+    /* ── Virality Tagline Bar ── */
+    .virality-bar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #1A2210;
+      color: var(--green);
+      border: 1px solid rgba(168,216,50,0.3);
+      padding: 11px 16px;
+      border-radius: 10px;
+      font-size: 0.72rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      margin: 20px 0 30px;
+      line-height: 1.4;
+    }
+
+    .virality-bar-icon { font-size: 1rem; flex-shrink: 0; }
+
+    /* ── Drop Card ── */
+    .drop-card {
+      border-radius: 16px;
+      border: 2px solid var(--green);
+      overflow: hidden;
+      margin-bottom: 16px;
+      position: relative;
+      transition: transform 0.18s;
+    }
+
+    .drop-card:active { transform: scale(0.985); }
+
+    .drop-band--sky .drop-card {
+      background: rgba(255,255,255,0.72);
+      backdrop-filter: blur(10px);
+    }
+
+    .drop-band--dark .drop-card { background: var(--card-bg); }
+
+    /* ── Card Visual Area (drink / food illustration via CSS) ── */
+    .drop-card-visual {
+      height: 172px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Layer annotations for drinks */
+    .layer-labels {
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      z-index: 2;
+    }
+
+    .layer-label-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.56rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: rgba(255,255,255,0.9);
+      text-shadow: 0 1px 5px rgba(0,0,0,0.75);
+    }
+
+    .layer-label-item::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.85);
+      box-shadow: 0 0 5px rgba(255,255,255,0.6);
+      flex-shrink: 0;
+    }
+
+    /* Purple Rain: Taro + Matcha specific gravity layers — sharp stops */
+    .visual--purple-rain {
+      background: linear-gradient(to bottom,
+        #f0e0ff 0%, #f0e0ff 6%,
+        #c090e8 6%, #c090e8 15%,
+        #8c30c0 15%, #8c30c0 26%,
+        #601a90 26%, #601a90 34%,
+        #246012 34%, #246012 46%,
+        #164508 46%, #164508 57%,
+        #cca880 57%, #cca880 65%,
+        #3c1808 65%, #3c1808 78%,
+        #1a0802 78%, #1a0802 90%,
+        #080301 90%, #080301 100%
+      );
+    }
+
+    /* Bangkok Sunset: Thai tea + condensed milk float */
+    .visual--bangkok-sunset {
+      background: linear-gradient(to bottom,
+        #fff8e8 0%, #fff8e8 6%,
+        #fde898 6%, #fde898 15%,
+        #f5a020 15%, #f5a020 26%,
+        #e06808 26%, #e06808 38%,
+        #b83a04 38%, #b83a04 52%,
+        #721800 52%, #721800 66%,
+        #320600 66%, #320600 80%,
+        #0e0100 80%, #0e0100 92%,
+        #040000 92%, #040000 100%
+      );
+    }
+
+    /* Food visuals */
+    .visual--gamja {
+      background: linear-gradient(140deg,
+        #200e00 0%, #5c2e08 22%,
+        #9a4e18 40%, #c87030 55%,
+        #e89040 68%, #f5b058 80%,
+        #ffc86a 90%, #ffe898 100%
+      );
+    }
+
+    .visual--pink-velvet {
+      background: linear-gradient(140deg,
+        #160010 0%, #400030 18%,
+        #7a1048 34%, #b03065 50%,
+        #d85888 64%, #f080a8 76%,
+        #f8a8c8 88%, #fff0f8 100%
+      );
+    }
+
+    /* Food emoji inside visual */
+    .visual-emoji {
+      position: absolute;
+      bottom: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 3.8rem;
+      line-height: 1;
+      filter: drop-shadow(0 4px 18px rgba(0,0,0,0.45));
+      z-index: 2;
+    }
+
+    /* Shine overlay on all visuals */
+    .drop-card-visual::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg,
+        rgba(255,255,255,0.08) 0%,
+        transparent 50%,
+        rgba(0,0,0,0.12) 100%);
+      pointer-events: none;
+    }
+
+    /* ── Card Body ── */
+    .drop-card-body { padding: 16px 18px 20px; }
+
+    .drop-card-tag {
+      display: inline-block;
+      font-size: 0.6rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      padding: 3px 9px;
+      border-radius: 5px;
+      margin-bottom: 9px;
+    }
+
+    .drop-band--sky .drop-card-tag { background: #1A2210; color: var(--green); }
+    .drop-band--dark .drop-card-tag { background: var(--green); color: #1A2210; }
+
+    .drop-card-name {
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 1.2rem;
+      line-height: 1.05;
+      letter-spacing: 0.03em;
+      margin-bottom: 7px;
+    }
+
+    .drop-band--sky .drop-card-name { color: #1A2210; }
+    .drop-band--dark .drop-card-name { color: var(--gold); }
+
+    .drop-card-desc {
+      font-size: 0.74rem;
+      line-height: 1.55;
+      margin-bottom: 16px;
+    }
+
+    .drop-band--sky .drop-card-desc { color: rgba(26,34,16,0.62); }
+    .drop-band--dark .drop-card-desc { color: rgba(244,240,230,0.55); }
+
+    .drop-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .drop-card-price {
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 1.65rem;
+      line-height: 1;
+    }
+
+    .drop-band--sky .drop-card-price { color: #1A2210; }
+    .drop-band--dark .drop-card-price { color: var(--gold); }
+
+    .drop-card-cta {
+      font-size: 0.68rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 8px 18px;
+      border-radius: 999px;
+      background: var(--green);
+      color: #1A2210;
+      border: none;
+      font-family: 'Nunito', sans-serif;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    /* ── K-Drama Combo Section ── */
+    .combo-band {
+      position: relative;
+      z-index: 1;
+      background: linear-gradient(180deg,
+        rgba(80,20,140,0.1) 0%,
+        transparent 60%);
+    }
+
+    .combo-band-inner {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 56px 20px 60px;
+    }
+
+    .combo-band .section-label { color: #c090f0; }
+
+    .combo-band-heading {
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 2.2rem;
+      line-height: 1.0;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+
+    .combo-band-sub {
+      font-size: 0.82rem;
+      color: rgba(244,240,230,0.45);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .combo-card {
+      border-radius: 16px;
+      border: 2px solid var(--green);
+      background: linear-gradient(145deg, #140828 0%, #1e0c3c 45%, #1A2210 100%);
+      overflow: hidden;
+      margin-top: 26px;
+      position: relative;
+    }
+
+    .combo-visual {
+      height: 116px;
+      background: linear-gradient(135deg,
+        #0c0320 0%, #2a0a60 28%,
+        #6020b0 50%, #9050d0 64%,
+        #b880e8 76%, #d8b0f8 87%,
+        #f0e0ff 100%
+      );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .combo-visual::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 35%, rgba(20,8,40,0.88) 100%);
+      pointer-events: none;
+    }
+
+    .combo-visual-emojis {
+      font-size: 2.8rem;
+      display: flex;
+      gap: 14px;
+      position: relative;
+      z-index: 2;
+      filter: drop-shadow(0 4px 14px rgba(0,0,0,0.5));
+    }
+
+    .combo-body { padding: 18px 20px 24px; }
+
+    .combo-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      margin-bottom: 9px;
+    }
+
+    .combo-eyebrow-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #c090f0;
+      flex-shrink: 0;
+    }
+
+    .combo-eyebrow-tag {
+      font-size: 0.6rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #c090f0;
+    }
+
+    .combo-name {
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 1.55rem;
+      color: var(--white);
+      line-height: 1.0;
+      letter-spacing: 0.03em;
+      margin-bottom: 5px;
+    }
+
+    .combo-subtitle {
+      font-size: 0.74rem;
+      color: rgba(192,144,240,0.72);
+      font-weight: 700;
+      margin-bottom: 16px;
+      font-style: italic;
+    }
+
+    .combo-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-bottom: 22px;
+    }
+
+    .combo-pill {
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 5px 13px;
+      border-radius: 999px;
+      border: 1px solid rgba(192,144,240,0.35);
+      color: rgba(240,224,255,0.82);
+      background: rgba(144,80,208,0.1);
+      cursor: default;
+    }
+
+    .combo-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .combo-price-block { display: flex; flex-direction: column; }
+
+    .combo-price {
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 2.2rem;
+      color: var(--gold);
+      line-height: 1;
+    }
+
+    .combo-savings {
+      font-size: 0.64rem;
+      font-weight: 700;
+      color: rgba(192,144,240,0.72);
+      margin-top: 4px;
+    }
+
+    .combo-order-btn {
+      font-size: 0.7rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 11px 20px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #7030c0, #b070e8);
+      color: #fff;
+      border: none;
+      font-family: 'Nunito', sans-serif;
+      box-shadow: 0 4px 18px rgba(112,48,192,0.45), inset 0 1px 0 rgba(255,255,255,0.18);
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .combo-order-btn:active { transform: scale(0.95); filter: brightness(1.1); }
+
+    /* ============================================================
+       IMAGE SYSTEM — all <img> tags
+    ============================================================ */
+
+    /* Header logo */
+    .topbar-logo img {
+      height: 34px;
+      width: auto;
+      display: block;
+    }
+
+    /* Hero mascot — img fills the sticker frame, inherits its blob shape */
+    .hero-mascot img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: inherit;
+    }
+
+    /* Product card images — fill the visual area, gradient stays as fallback */
+    .drop-card-visual img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      z-index: 0;
+    }
+
+    /* Ensure layer annotation + shine overlay stay above the photo */
+    .drop-card-visual .layer-labels { z-index: 3; }
+    .drop-card-visual::after       { z-index: 1; }
+
+    /* Combo photo */
+    .combo-visual img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      z-index: 0;
+    }
+
+    /* Keep the gradient vignette & emoji above the photo */
+    .combo-visual::after          { z-index: 1; }
+
+    /* Footer stamp */
+    .footer-stamp-wrap {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+
+    .footer-stamp {
+      width: 72px;
+      height: 72px;
+      opacity: 0.3;
+      filter: invert(1); /* stamp-white.svg — force white on dark bg */
+    }
+
+    /* ── Aesthetic Drop / Merch Section ── */
+    .merch-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .merch-card {
+      background: var(--card-bg);
+      border: 2px solid var(--green);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: transform 0.18s;
+      position: relative;
+    }
+
+    .merch-card:active { transform: scale(0.97); }
+
+    .merch-card-visual {
+      aspect-ratio: 1 / 1;
+      background: linear-gradient(145deg, #1c2810, #131c0a);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding: 18px;
+      position: relative;
+    }
+
+    /* Soft spotlight under sticker png */
+    .merch-card-visual::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 55%,
+        rgba(168,216,50,0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .merch-card-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      position: relative;
+      z-index: 1;
+      filter: drop-shadow(0 6px 20px rgba(168,216,50,0.3));
+    }
+
+    .merch-card-body { padding: 12px 14px 16px; }
+
+    .merch-drop-tag {
+      display: inline-block;
+      font-size: 0.58rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      background: var(--green);
+      color: #1A2210;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-bottom: 7px;
+    }
+
+    .merch-card-name {
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 0.88rem;
+      color: var(--gold);
+      line-height: 1.1;
+      letter-spacing: 0.04em;
+      margin-bottom: 4px;
+    }
+
+    .merch-card-desc {
+      font-size: 0.68rem;
+      color: rgba(244,240,230,0.48);
+      line-height: 1.45;
+      margin-bottom: 10px;
+    }
+
+    .merch-card-status {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.6rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--green);
+    }
+
+    .merch-card-status::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      background: var(--green);
+      border-radius: 50%;
+      flex-shrink: 0;
+      animation: statusBlink 1.6s ease infinite;
+    }
+
+    @keyframes statusBlink {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.25; }
+    }
+
+    /* ============================================================
+       DOCK SVG ICONS
+    ============================================================ */
+    .dock-btn svg {
+      width: 22px;
+      height: 22px;
+      flex-shrink: 0;
+    }
+
+    /* ============================================================
+       SOCIAL PROOF
+    ============================================================ */
+    .trending-block {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: var(--card-bg);
+      border: 1px solid rgba(168,216,50,0.2);
+      border-radius: 16px;
+      padding: 18px 20px;
+      margin-top: 24px;
+      margin-bottom: 18px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .trending-block::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(100deg,
+        rgba(252,128,25,0.06) 0%,
+        rgba(226,55,68,0.06) 100%);
+      pointer-events: none;
+    }
+
+    .trending-fire {
+      font-size: 2rem;
+      flex-shrink: 0;
+      filter: drop-shadow(0 0 10px rgba(252,128,25,0.5));
+      animation: flamePulse 2.2s ease infinite;
+    }
+
+    @keyframes flamePulse {
+      0%, 100% { transform: scale(1) rotate(-3deg); }
+      50% { transform: scale(1.14) rotate(3deg); }
+    }
+
+    .trending-content { flex: 1; min-width: 0; }
+
+    .trending-headline {
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 1rem;
+      color: var(--gold);
+      letter-spacing: 0.07em;
+      line-height: 1.1;
+    }
+
+    .trending-subline {
+      font-size: 0.74rem;
+      font-weight: 700;
+      color: rgba(244,240,230,0.6);
+      margin-top: 3px;
+    }
+
+    .trending-platforms {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+
+    .platform-badge {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 0.62rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 5px 10px;
+      border-radius: 8px;
+    }
+
+    .platform-badge svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+    .platform-badge--swiggy {
+      background: rgba(252,128,25,0.12);
+      border: 1px solid rgba(252,128,25,0.35);
+      color: #FC8019;
+    }
+
+    .platform-badge--zomato {
+      background: rgba(226,55,68,0.12);
+      border: 1px solid rgba(226,55,68,0.35);
+      color: #E23744;
+    }
+
+    .review-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .review-card {
+      background: var(--card-bg);
+      border: 1px solid rgba(168,216,50,0.1);
+      border-radius: 14px;
+      padding: 14px 14px 12px;
+    }
+
+    .review-stars {
+      color: var(--gold);
+      font-size: 0.65rem;
+      letter-spacing: 0.05em;
+      margin-bottom: 7px;
+    }
+
+    .review-text {
+      font-size: 0.7rem;
+      color: rgba(244,240,230,0.7);
+      line-height: 1.55;
+      margin-bottom: 9px;
+      font-style: italic;
+    }
+
+    .review-author {
+      font-size: 0.64rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: rgba(244,240,230,0.38);
+    }
+
+    .review-source {
+      font-size: 0.62rem;
+      font-weight: 700;
+      margin-top: 2px;
+    }
+
+    .review-source--swiggy { color: #FC8019; }
+    .review-source--zomato { color: #E23744; }
+
+    /* ============================================================
+       LEGAL FOOTER
+    ============================================================ */
+    .footer {
+      position: relative;
+      z-index: 1;
+      background: var(--bg);
+      border-top: 1px solid rgba(168,216,50,0.12);
+    }
+
+    .footer-inner {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 36px 20px 30px;
+    }
+
+    .footer-brand-block {
+      text-align: center;
+      margin-bottom: 22px;
+    }
+
+    .footer-logo {
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 1.8rem;
+      color: var(--green);
+      letter-spacing: 0.06em;
+      margin-bottom: 4px;
+    }
+
+    .footer-logo span { color: var(--gold); }
+
+    .footer-tagline {
+      font-size: 0.78rem;
+      color: rgba(244,240,230,0.32);
+      font-weight: 600;
+    }
+
+    .footer-hr {
+      border: none;
+      border-top: 1px solid rgba(168,216,50,0.1);
+      margin: 0 0 22px;
+    }
+
+    .footer-legal-block { text-align: center; }
+
+    .footer-entity-text {
+      font-size: 0.75rem;
+      color: rgba(244,240,230,0.52);
+      font-weight: 600;
+      line-height: 1.65;
+      margin-bottom: 5px;
+    }
+
+    .footer-entity-text strong {
+      color: rgba(244,240,230,0.78);
+      font-weight: 900;
+    }
+
+    .footer-address-text {
+      font-size: 0.72rem;
+      color: rgba(244,240,230,0.38);
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+
+    .footer-policy-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .footer-policy-link {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--green);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: rgba(168,216,50,0.35);
+      transition: text-decoration-color 0.2s;
+    }
+
+    .footer-policy-sep {
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background: rgba(244,240,230,0.25);
+      flex-shrink: 0;
+    }
+
+    .footer-copyright {
+      font-size: 0.63rem;
+      color: rgba(244,240,230,0.2);
+      letter-spacing: 0.05em;
+      line-height: 1.6;
+    }
+
+    /* ============================================================
+       FULL MENU TAB SYSTEM
+    ============================================================ */
+    .menu-tab-strip {
+      display: flex;
+      gap: 7px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      -webkit-overflow-scrolling: touch;
+      padding: 4px 0 14px;
+      margin-top: 20px;
+    }
+    .menu-tab-strip::-webkit-scrollbar { display: none; }
+
+    .menu-tab {
+      flex-shrink: 0;
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 900;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 7px 15px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(168,216,50,0.22);
+      color: rgba(244,240,230,0.48);
+      background: transparent;
+      cursor: pointer;
+      transition: background 0.18s, color 0.18s, border-color 0.18s;
+      white-space: nowrap;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .menu-tab.is-active {
+      background: var(--green);
+      color: #1A2210;
+      border-color: var(--green);
+    }
+
+    .menu-panel { display: none; }
+    .menu-panel.is-active { display: block; }
+
+    /* Category header row inside each panel */
+    .menu-cat-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 0 4px;
+    }
+    .menu-cat-emoji { font-size: 1.3rem; flex-shrink: 0; }
+    .menu-cat-title {
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 1.05rem;
+      color: var(--gold);
+      letter-spacing: 0.06em;
+      line-height: 1;
+    }
+    .menu-cat-badge {
+      margin-left: auto;
+      font-size: 0.58rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 3px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(245,166,35,0.35);
+      color: var(--gold);
+      white-space: nowrap;
+    }
+
+    /* Subcategory label */
+    .menu-subcat {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.62rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--green);
+      padding: 18px 0 6px;
+    }
+    .menu-subcat::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: rgba(168,216,50,0.14);
+    }
+
+    /* Item row */
+    .menu-item {
+      padding: 11px 0;
+      border-bottom: 1px solid rgba(168,216,50,0.07);
+    }
+    .menu-item:last-child { border-bottom: none; }
+
+    .menu-item-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 3px;
+    }
+    .menu-item-name {
+      font-size: 0.87rem;
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.3;
+      flex: 1;
+    }
+    .menu-item-price {
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 1rem;
+      color: var(--gold);
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+    .menu-item-desc {
+      font-size: 0.71rem;
+      color: rgba(244,240,230,0.46);
+      line-height: 1.5;
+    }
+
+    /* Pills (combo contents) */
+    .menu-item-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 6px;
+    }
+    .menu-pill {
+      font-size: 0.62rem;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(168,216,50,0.2);
+      color: rgba(244,240,230,0.58);
+      cursor: default;
+    }
+
+    /* Badges */
+    .menu-badges {
+      display: flex;
+      gap: 5px;
+      flex-wrap: wrap;
+      margin-top: 5px;
+    }
+    .mbadge {
+      font-size: 0.57rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+    .mbadge--hot  { background: rgba(226,55,68,0.13); color:#E23744; border:1px solid rgba(226,55,68,0.28); }
+    .mbadge--best { background: rgba(245,166,35,0.1);  color:var(--gold); border:1px solid rgba(245,166,35,0.28); }
+    .mbadge--viral{ background: rgba(168,216,50,0.1);  color:var(--green); border:1px solid rgba(168,216,50,0.25); }
+
+    /* ============================================================
+       Subtle entrance animations */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero > * { animation: fadeUp 0.6s ease both; }
+    .hero > *:nth-child(1) { animation-delay: 0.1s; }
+    .hero > *:nth-child(2) { animation-delay: 0.25s; }
+    .hero > *:nth-child(3) { animation-delay: 0.35s; }
+    .hero > *:nth-child(4) { animation-delay: 0.45s; }
+    .hero > *:nth-child(5) { animation-delay: 0.55s; }
+  </style>
+</head>
+<body>
+
+  <!-- ══════════ TOP NAV ══════════ -->
+  <nav class="topbar">
+    <div class="topbar-logo">
+      <img src="assets/images/logos/logo-full.svg" alt="Boba Bear logo for bubble tea and K-street food delivery in Dehradun" />
+    </div>
+    <div class="topbar-tag">Now Open</div>
+  </nav>
+
+  <!-- ══════════ HERO ══════════ -->
+  <section class="section hero">
+
+    <div class="hero-sticker-frame">
+      <div class="hero-mascot">
+        <img src="assets/images/ui/hero-digital-mascot.png"
+             alt="Boba Bear digital mascot promoting premium bubble tea and K-street food delivery in Dehradun"
+             fetchpriority="high" />
+      </div>
+    </div>
+
+    <h1 class="hero-headline">FOR THE<br/>UNBOTHERED.</h1>
+
+    <p class="hero-sub">S-Tier Sips. K-Street Drip.</p>
+
+    <div class="hero-badges">
+      <span class="badge badge-outline">Fresh Daily</span>
+      <span class="badge badge-outline">No Shortcuts</span>
+      <span class="badge badge-outline">K-Street OG</span>
+    </div>
+
+  </section>
+
+  <!-- ══════════ MARQUEE ══════════ -->
+  <div class="marquee-wrap" aria-hidden="true">
+    <div class="marquee-track">
+      <span class="marquee-item">FOR THE UNBOTHERED</span>
+      <span class="marquee-dot">✦</span>
+      <span class="marquee-item">S-TIER SIPS. K-STREET DRIP.</span>
+      <span class="marquee-dot">✦</span>
+      <span class="marquee-item">CATCH THE DROP</span>
+      <span class="marquee-dot">✦</span>
+      <span class="marquee-item">PURPLE RAIN MATCHA</span>
+      <span class="marquee-dot">✦</span>
+      <span class="marquee-item">GAMJA CORN DOG</span>
+      <span class="marquee-dot">✦</span>
+      <span class="marquee-item">SEOUL STREET MOMOS</span>
+      <span class="marquee-dot">✦</span>
+      <span class="marquee-item">CLOUD FOAM MATRIX</span>
+      <span class="marquee-dot">✦</span>
+      <span class="marquee-item">FOR THE UNBOTHERED</span>
+      <span class="marquee-dot">✦</span>
+      <span class="marquee-item">S-TIER SIPS. K-STREET DRIP.</span>
+      <span class="marquee-dot">✦</span>
+      <span class="marquee-item">CATCH THE DROP</span>
+      <span class="marquee-dot">✦</span>
+      <span class="marquee-item">PURPLE RAIN MATCHA</span>
+      <span class="marquee-dot">✦</span>
+      <span class="marquee-item">GAMJA CORN DOG</span>
+      <span class="marquee-dot">✦</span>
+      <span class="marquee-item">SEOUL STREET MOMOS</span>
+      <span class="marquee-dot">✦</span>
+      <span class="marquee-item">CLOUD FOAM MATRIX</span>
+      <span class="marquee-dot">✦</span>
+    </div>
+  </div>
+
+  <!-- ══════════ FULL MENU ══════════ -->
+  <section class="section" id="menu">
+    <div class="section-label">✦ Full Menu</div>
+    <h2 class="heading text-gold" style="font-size:2.2rem; line-height:1.05;">THE<br/>MENU.</h2>
+
+    <div id="full-menu-container">
+
+      <!-- ── Category Tab Strip ── -->
+      <div class="menu-tab-strip" role="tablist" aria-label="Menu categories">
+        <button class="menu-tab is-active" data-panel="combos" role="tab" aria-selected="true">K-Drama Combos</button>
+        <button class="menu-tab" data-panel="burgers" role="tab" aria-selected="false">Burgers &amp; Wraps</button>
+        <button class="menu-tab" data-panel="momos" role="tab" aria-selected="false">K-Momos</button>
+        <button class="menu-tab" data-panel="fries" role="tab" aria-selected="false">Fries &amp; Bites</button>
+        <button class="menu-tab" data-panel="quesadillas" role="tab" aria-selected="false">Quesadillas</button>
+        <button class="menu-tab" data-panel="ramyun" role="tab" aria-selected="false">Ramyun</button>
+        <button class="menu-tab" data-panel="desserts" role="tab" aria-selected="false">Desserts</button>
+        <button class="menu-tab" data-panel="beverages" role="tab" aria-selected="false">Beverages</button>
+      </div>
+
+      <!-- ══ PANEL 1: K-Drama Combos ══ -->
+      <div class="menu-panel is-active" id="panel-combos" role="tabpanel">
+        <div class="menu-cat-header">
+          <span class="menu-cat-emoji">🎬</span>
+          <span class="menu-cat-title">K-Drama Combos</span>
+          <span class="menu-cat-badge">Most Ordered</span>
+        </div>
+
+        <div class="menu-subcat">Solo Combos &amp; Meals</div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Exam Survivor Kit</span>
+            <span class="menu-item-price">₹349</span>
+          </div>
+          <p class="menu-item-desc">Late-night study fuel. Our creamy, cheesy Viral Spicy Carbonara Ramyun Noodle Bowl paired with a strong Gangnam Style Iced Cold Coffee.</p>
+          <div class="menu-item-pills">
+            <span class="menu-pill">Viral Spicy Carbonara Ramyun</span>
+            <span class="menu-pill">Gangnam Style Cold Coffee</span>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Fire &amp; Ice Challenge</span>
+            <span class="menu-item-price">₹399</span>
+          </div>
+          <p class="menu-item-desc">Can you handle the heat? A fiery Volcanic Fire Ramyun Noodle Bowl cooled down by a sweet, creamy Bangkok Sunset Thai Boba Bubble Tea.</p>
+          <div class="menu-item-pills">
+            <span class="menu-pill">Volcanic Fire Ramyun</span>
+            <span class="menu-pill">Bangkok Sunset Thai Boba</span>
+          </div>
+          <div class="menu-badges"><span class="mbadge mbadge--hot">🌶 Extra Spicy</span></div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Seoul Mate Solo</span>
+            <span class="menu-item-price">₹249</span>
+          </div>
+          <p class="menu-item-desc">Light and satisfying. 6 Pcs of our signature Seoul Street Veg Momos [Steamed Dumplings] paired with a zesty, fizz-free Jeju Island Mint Mojito.</p>
+          <div class="menu-item-pills">
+            <span class="menu-pill">Seoul Street Veg Momos (6 Pcs)</span>
+            <span class="menu-pill">Jeju Island Mint Mojito</span>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Borahae Purple Combo</span>
+            <span class="menu-item-price">₹449</span>
+          </div>
+          <p class="menu-item-desc">A fan favorite! 6 Pcs of Seoul Street Veg Momos [Steamed Dumplings], a large portion of The OG Salted Fries, and our signature Purple Rain Taro Bubble Tea.</p>
+          <div class="menu-item-pills">
+            <span class="menu-pill">Seoul Street Veg Momos (6 Pcs)</span>
+            <span class="menu-pill">OG Salted Fries</span>
+            <span class="menu-pill">Purple Rain Taro Bubble Tea</span>
+          </div>
+          <div class="menu-badges"><span class="mbadge mbadge--best">⭐ Fan Favourite</span></div>
+        </div>
+
+        <div class="menu-subcat">Sharing Bundles &amp; Platters</div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">K-Drama Binge Platter</span>
+            <span class="menu-item-price">₹599</span>
+          </div>
+          <p class="menu-item-desc">Screen time snack sorted! Seoul Street Veg Momos (6 Pcs) + Pink Velvet Cheesy Loaded Fries + 1× Purple Rain Taro Bubble Tea + 1× Midnight Chocolate Bubble Tea Shake.</p>
+          <div class="menu-item-pills">
+            <span class="menu-pill">Seoul Street Veg Momos (6 Pcs)</span>
+            <span class="menu-pill">Pink Velvet Cheesy Fries</span>
+            <span class="menu-pill">Purple Rain Taro Boba</span>
+            <span class="menu-pill">Midnight Choco Boba Shake</span>
+          </div>
+          <div class="menu-badges"><span class="mbadge mbadge--viral">📸 Binge-Worthy</span></div>
+        </div>
+
+      </div><!-- /panel-combos -->
+
+      <!-- ══ PANEL 2: Burgers & Wraps ══ -->
+      <div class="menu-panel" id="panel-burgers" role="tabpanel">
+        <div class="menu-cat-header">
+          <span class="menu-cat-emoji">🍔</span>
+          <span class="menu-cat-title">Burgers &amp; Wraps</span>
+        </div>
+
+        <div class="menu-subcat">K Crunch Veg Burgers</div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Seoul Masala Veg Burger</span>
+            <span class="menu-item-price">₹149</span>
+          </div>
+          <p class="menu-item-desc">Crispy potato patty fully coated in smoky Seoul Masala sauce. Sandwiched in a toasted bun with mint mayo, red onion rings, and a magical dust of chaat masala.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Dynamite Red Veg Burger</span>
+            <span class="menu-item-price">₹159</span>
+          </div>
+          <p class="menu-item-desc">A crispy patty submerged in fiery Dynamite Red (Gochujang) sauce. Stacked high in a bun with cooling tandoori mayo, jalapenos, and fresh lettuce.</p>
+          <div class="menu-badges"><span class="mbadge mbadge--hot">🌶 Spicy</span></div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Gangnam Glaze Veg Burger</span>
+            <span class="menu-item-price">₹159</span>
+          </div>
+          <p class="menu-item-desc">A jagged-crust veggie patty glazed in sticky Gangnam soy-garlic sauce. Piled high with crunchy fried onions [birista] and savory mayo inside a toasted bun.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Pink Velvet Cheesy Veg Burger</span>
+            <span class="menu-item-price">₹169</span>
+          </div>
+          <p class="menu-item-desc">A crispy patty dunked in rich Pink Velvet [spicy cream] sauce. Topped with extra liquid cheese, sweet corn, and purple slaw.</p>
+          <div class="menu-badges"><span class="mbadge mbadge--best">⭐ Best Seller</span></div>
+        </div>
+
+        <div class="menu-subcat">Premium Paneer Burgers</div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Seoul Masala Paneer Burger</span>
+            <span class="menu-item-price">₹219</span>
+          </div>
+          <p class="menu-item-desc">A thick slab of fresh paneer, fried golden and coated in smoky Seoul Masala sauce. Served in a grand bun with red onions and mint mayo.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Dynamite Red Paneer Burger</span>
+            <span class="menu-item-price">₹219</span>
+          </div>
+          <p class="menu-item-desc">A massive crispy paneer patty dipped deep into Dynamite Red sauce. The heat of the gochujang meets the soft paneer inside. Served with jalapenos and spicy mayo.</p>
+          <div class="menu-badges"><span class="mbadge mbadge--hot">🌶 Spicy</span></div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Gangnam Glaze Paneer Burger</span>
+            <span class="menu-item-price">₹219</span>
+          </div>
+          <p class="menu-item-desc">Premium paneer patty glazed in Gangnam soy garlic sauce. The sweetness pairs perfectly with the savoury paneer, crunchy onions, and garlic mayo.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Pink Velvet Cheesy Paneer Burger</span>
+            <span class="menu-item-price">₹229</span>
+          </div>
+          <p class="menu-item-desc">A crispy paneer slab swimming in Pink Velvet sauce. We double down with extra liquid cheese and purple slaw.</p>
+          <div class="menu-badges"><span class="mbadge mbadge--best">⭐ Best Seller</span></div>
+        </div>
+
+        <div class="menu-subcat">K Crunch Veg Wraps &amp; Rolls</div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Seoul Masala Veg Wrap Roll</span>
+            <span class="menu-item-price">₹159</span>
+          </div>
+          <p class="menu-item-desc">Masala veg roll upgraded. Herb potato patty coated in Seoul Masala sauce, rolled tight in a wrap with red onions, mint mayo, and chaat masala.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Dynamite Red Veg Wrap Roll</span>
+            <span class="menu-item-price">₹169</span>
+          </div>
+          <p class="menu-item-desc">Crispy veggie patty submerged in Dynamite Red sauce, sliced and wrapped tight with jalapenos, fresh lettuce, and cooling tandoori mayo.</p>
+          <div class="menu-badges"><span class="mbadge mbadge--hot">🌶 Spicy</span></div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Gangnam Glaze Veg Wrap Roll</span>
+            <span class="menu-item-price">₹169</span>
+          </div>
+          <p class="menu-item-desc">Veggie patty glazed in Gangnam soy garlic sauce, wrapped tight with a mountain of crunchy fried onions and garlic mayo.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Pink Velvet Cheesy Veg Wrap Roll</span>
+            <span class="menu-item-price">₹179</span>
+          </div>
+          <p class="menu-item-desc">Potato patty dunked in Pink Velvet spicy cream sauce. Loaded inside a wrap with liquid cheese, sweet corn, and purple cabbage slaw.</p>
+        </div>
+
+        <div class="menu-subcat">Premium Paneer Wraps &amp; Rolls</div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Seoul Masala Paneer Wrap Roll</span>
+            <span class="menu-item-price">₹219</span>
+          </div>
+          <p class="menu-item-desc">Authentic tandoori vibes. A spiced paneer patty coated in Seoul Masala sauce, wrapped with red onions and zesty mint mayo.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Dynamite Red Paneer Wrap Roll</span>
+            <span class="menu-item-price">₹219</span>
+          </div>
+          <p class="menu-item-desc">Whole paneer patty dipped in fiery Dynamite Red sauce, wrapped with fresh lettuce and cooling mayo to balance the heat.</p>
+          <div class="menu-badges"><span class="mbadge mbadge--hot">🌶 Spicy</span></div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Gangnam Glaze Paneer Wrap Roll</span>
+            <span class="menu-item-price">₹219</span>
+          </div>
+          <p class="menu-item-desc">Sweet, savoury, and crunchy. A massive paneer slab glazed in Gangnam soy garlic sauce, wrapped with fried onions and garlic mayo.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Pink Velvet Cheesy Paneer Wrap Roll</span>
+            <span class="menu-item-price">₹229</span>
+          </div>
+          <p class="menu-item-desc">Paneer patty swimming in rich Pink Velvet sauce, wrapped tightly with extra liquid cheese and purple slaw.</p>
+        </div>
+
+        <div class="menu-subcat">K Street Burger Meals</div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">The Seoul Street Meal</span>
+            <span class="menu-item-price">₹249</span>
+          </div>
+          <p class="menu-item-desc">The ultimate street food combo. Choose any Veg K-Burger, served with a side of crispy OG Salted Fries and your choice of 350ml Iced Tea.</p>
+          <div class="menu-item-pills">
+            <span class="menu-pill">Any Veg K-Burger</span>
+            <span class="menu-pill">OG Salted Fries</span>
+            <span class="menu-pill">Iced Tea [350ml]</span>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Premium Paneer Meal</span>
+            <span class="menu-item-price">₹329</span>
+          </div>
+          <p class="menu-item-desc">A feast fit for a King. Choose any Royal Paneer Burger, served with a side of crispy OG Salted Fries and your choice of 350ml Iced Tea.</p>
+          <div class="menu-item-pills">
+            <span class="menu-pill">Any Paneer Burger</span>
+            <span class="menu-pill">OG Salted Fries</span>
+            <span class="menu-pill">Iced Tea [350ml]</span>
+          </div>
+        </div>
+
+      </div><!-- /panel-burgers -->
+
+      <!-- ══ PANEL 3: K-Momos ══ -->
+      <div class="menu-panel" id="panel-momos" role="tabpanel">
+        <div class="menu-cat-header">
+          <span class="menu-cat-emoji">🥟</span>
+          <span class="menu-cat-title">The K-Momo Collection</span>
+        </div>
+
+        <div class="menu-subcat">Seoul Street Dumplings — The Classics</div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Seoul Street Veg Momos [6 Pcs — Steamed]</span>
+            <span class="menu-item-price">₹119</span>
+          </div>
+          <p class="menu-item-desc">Soft, juicy vegetable dumplings steamed to perfection. Served with our signature Dynamite Red spicy dip instead of boring chutney.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Golden Crunch Veg Momos [6 Pcs — Fried]</span>
+            <span class="menu-item-price">₹129</span>
+          </div>
+          <p class="menu-item-desc">Crispy, golden-fried vegetable dumplings. Flaky on the outside, savory on the inside. Perfect for dipping.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Seoul Street Paneer Momos [6 Pcs — Steamed]</span>
+            <span class="menu-item-price">₹139</span>
+          </div>
+          <p class="menu-item-desc">Soft, pillowy steamed dumplings stuffed with fresh, seasoned paneer and herbs. A comforting classic.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Golden Crunch Paneer Momos [6 Pcs — Fried]</span>
+            <span class="menu-item-price">₹149</span>
+          </div>
+          <p class="menu-item-desc">Crunchy on the outside, soft paneer on the inside. These golden-fried dumplings are a crowd favorite.</p>
+          <div class="menu-badges"><span class="mbadge mbadge--best">⭐ Crowd Fave</span></div>
+        </div>
+
+        <div class="menu-subcat">Wok-Tossed Signature Momos</div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Seoul Masala Veg Momos [6 Pcs]</span>
+            <span class="menu-item-price">₹149</span>
+          </div>
+          <p class="menu-item-desc">Tandoori vibes without the clay oven. Crispy momos wok-tossed in smoky Seoul Masala sauce with red onions and coriander.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Seoul Masala Paneer Momos [6 Pcs]</span>
+            <span class="menu-item-price">₹179</span>
+          </div>
+          <p class="menu-item-desc">Tandoori vibes without the clay oven. Crispy paneer momos wok-tossed in smoky Seoul Masala sauce with red onions and coriander.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Dynamite Red Veg Momos [6 Pcs]</span>
+            <span class="menu-item-price">₹159</span>
+          </div>
+          <p class="menu-item-desc">For the brave. Crispy momos wok-tossed in our fiery Dynamite Red (Gochujang) sauce. Finished with sesame seeds and fresh spring onions.</p>
+          <div class="menu-badges"><span class="mbadge mbadge--hot">🌶 Spicy</span></div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Dynamite Red Paneer Momos [6 Pcs]</span>
+            <span class="menu-item-price">₹189</span>
+          </div>
+          <p class="menu-item-desc">For the brave. Crispy paneer momos wok-tossed in our fiery Dynamite Red (Gochujang) sauce. Finished with sesame seeds and fresh spring onions.</p>
+          <div class="menu-badges"><span class="mbadge mbadge--hot">🌶 Spicy</span></div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Gangnam Glaze Veg Momos [6 Pcs]</span>
+            <span class="menu-item-price">₹159</span>
+          </div>
+          <p class="menu-item-desc">Seoul street style. Golden-fried momos glazed in our sticky Gangnam soy-garlic sauce. Topped with a crunch of fried onions.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Gangnam Glaze Paneer Momos [6 Pcs]</span>
+            <span class="menu-item-price">₹189</span>
+          </div>
+          <p class="menu-item-desc">Seoul street style. Golden-fried paneer momos glazed in our sticky Gangnam soy-garlic sauce. Topped with a crunch of fried onions.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Pink Velvet Rose Veg Momos [6 Pcs]</span>
+            <span class="menu-item-price">₹169</span>
+          </div>
+          <p class="menu-item-desc">The trendsetter. Crispy momos drowned in our rich Pink Velvet (spicy cream) sauce. Finished with a drizzle of liquid cheese and sweet corn.</p>
+          <div class="menu-badges"><span class="mbadge mbadge--viral">📸 Viral</span></div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Pink Velvet Paneer Momos [6 Pcs]</span>
+            <span class="menu-item-price">₹199</span>
+          </div>
+          <p class="menu-item-desc">The trendsetter. Crispy paneer momos drowned in our rich Pink Velvet (spicy cream) sauce. Finished with a drizzle of liquid cheese and sweet corn.</p>
+          <div class="menu-badges"><span class="mbadge mbadge--viral">📸 Viral</span></div>
+        </div>
+
+      </div><!-- /panel-momos -->
+
+      <!-- ══ PANEL 4: Fries, Bites & Corn Dogs ══ -->
+      <div class="menu-panel" id="panel-fries" role="tabpanel">
+        <div class="menu-cat-header">
+          <span class="menu-cat-emoji">🍟</span>
+          <span class="menu-cat-title">Fries, Bites &amp; Corn Dogs</span>
+        </div>
+
+        <div class="menu-subcat">K-Loaded Fries</div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">The OG Salted Fries [Large]</span>
+            <span class="menu-item-price">₹109</span>
+          </div>
+          <p class="menu-item-desc">Premium thick-cut fries dusted with sea salt. Crispy outside, fluffy inside. The perfect sidekick.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Peri Peri Dynamite Fries [Large]</span>
+            <span class="menu-item-price">₹149</span>
+          </div>
+          <p class="menu-item-desc">Crispy thick-cut fries tossed in spicy, tangy Peri-Peri seasoning for a bold kick.</p>
+          <div class="menu-badges"><span class="mbadge mbadge--hot">🌶 Spicy</span></div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Seoul Masala Fusion Fries</span>
+            <span class="menu-item-price">₹159</span>
+          </div>
+          <p class="menu-item-desc">Chatpata meets Seoul. Fries tossed in smoky Seoul Masala sauce. Garnished with red onions, mint mayo, and a dusting of magic chaat masala.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Dynamite Red Street Fries</span>
+            <span class="menu-item-price">₹169</span>
+          </div>
+          <p class="menu-item-desc">Seoul's hottest street snack. Premium fries fully loaded with fiery Dynamite Red [Gochujang] sauce. Topped with toasted sesame seeds and fresh spring onions.</p>
+          <div class="menu-badges"><span class="mbadge mbadge--hot">🌶 Spicy</span></div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Gangnam Glaze Loaded Fries</span>
+            <span class="menu-item-price">₹169</span>
+          </div>
+          <p class="menu-item-desc">Sweet, sticky, and savory. Crispy fries glazed in our signature Gangnam soy-garlic sauce, loaded with a mountain of crunchy fried onions.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Pink Velvet Cheesy Fries</span>
+            <span class="menu-item-price">₹179</span>
+          </div>
+          <p class="menu-item-desc">The ultimate comfort food. Golden fries drowned in our rich Pink Velvet (spicy cream) sauce, then blanketed with extra liquid cheese and sweet corn.</p>
+          <div class="menu-badges"><span class="mbadge mbadge--best">⭐ Best Seller</span></div>
+        </div>
+
+        <div class="menu-subcat">Korean Corn Dogs</div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">The Classic Seoul Dog [1 Pc]</span>
+            <span class="menu-item-price">₹149</span>
+          </div>
+          <p class="menu-item-desc">The OG K-Drama snack. Half veggie sausage and half mozzarella block. Coated in crispy Panko, fried golden, and drizzled with classic mustard and ketchup.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">The Dynamite Crumb Dog [1 Pc]</span>
+            <span class="menu-item-price">₹169</span>
+          </div>
+          <p class="menu-item-desc">Spicy cheesy goodness. A whole mozzarella stick batter-fried and rolled in spicy ramen crumbs. Drizzled with our fiery Dynamite Red sauce and jalapeno cheese.</p>
+          <div class="menu-badges"><span class="mbadge mbadge--hot">🌶 Spicy</span></div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">The Gamja Potato Dog [1 Pc]</span>
+            <span class="menu-item-price">₹179</span>
+          </div>
+          <p class="menu-item-desc">French fries on a stick. A whole stick of melting mozzarella, double-dipped and rolled in diced potato cubes. Crunchy fries on the outside, gooey cheese on the inside.</p>
+          <div class="menu-badges"><span class="mbadge mbadge--viral">📸 Insta-Worthy</span></div>
+        </div>
+
+        <div class="menu-subcat">Crispy Bites</div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Seoul Golden Hash Browns [2 Pcs]</span>
+            <span class="menu-item-price">₹89</span>
+          </div>
+          <p class="menu-item-desc">Crispy, golden-brown shredded potato patties. Crunchy on the outside, fluffy on the inside. The ultimate comfort snack.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Cheesy Potato Pop-Shots [8 Pcs]</span>
+            <span class="menu-item-price">₹149</span>
+          </div>
+          <p class="menu-item-desc">Golden potato bites with a creamy, melting cheese center. Addictive and fun to eat.</p>
+          <div class="menu-badges"><span class="mbadge mbadge--best">⭐ Most Addictive</span></div>
+        </div>
+
+      </div><!-- /panel-fries -->
+
+      <!-- ══ PANEL 5: Quesadillas ══ -->
+      <div class="menu-panel" id="panel-quesadillas" role="tabpanel">
+        <div class="menu-cat-header">
+          <span class="menu-cat-emoji">🌮</span>
+          <span class="menu-cat-title">The K-Quesadilla Collection</span>
+        </div>
+
+        <div class="menu-subcat">Veggie Cheese Pockets</div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Seoul Masala Fusion Quesadilla [4 Pcs]</span>
+            <span class="menu-item-price">₹169</span>
+          </div>
+          <p class="menu-item-desc">Crunchy veggies tossed in smoky Seoul Masala sauce with red onions and a hint of mint. Grilled crisp and served with a Tandoori Dip.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Dynamite Red Corn Quesadilla [4 Pcs]</span>
+            <span class="menu-item-price">₹179</span>
+          </div>
+          <p class="menu-item-desc">Sweet corn and crunchy peppers tossed in our fiery Dynamite Red sauce, smothered in mozzarella. Served with a cooling Garlic Mayo dip.</p>
+          <div class="menu-badges"><span class="mbadge mbadge--hot">🌶 Spicy</span></div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Gangnam Glaze Veggie Quesadilla [4 Pcs]</span>
+            <span class="menu-item-price">₹179</span>
+          </div>
+          <p class="menu-item-desc">A savory explosion. Corn, onions, and peppers glazed in our sticky Gangnam Soy-Garlic sauce. Topped with a crunch of fried onions inside the cheesy fold.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Pink Velvet Lava Quesadilla [4 Pcs]</span>
+            <span class="menu-item-price">₹189</span>
+          </div>
+          <p class="menu-item-desc">The cheesy dream. Sweet corn and peppers swimming in Pink Velvet sauce and Liquid Cheese. When you bite, the pink lava oozes out. Instagram ready!</p>
+          <div class="menu-badges"><span class="mbadge mbadge--viral">📸 Instagram Ready</span></div>
+        </div>
+
+        <div class="menu-subcat">Paneer Supreme Pockets</div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Seoul Masala Paneer Quesadilla [4 Pcs]</span>
+            <span class="menu-item-price">₹229</span>
+          </div>
+          <p class="menu-item-desc">Better than a Pizza. Paneer cubes coated in smoky Seoul Masala sauce, grilled with red onions and coriander. Served with Mint Mayo for that authentic punch.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Dynamite Red Paneer Quesadilla [4 Pcs]</span>
+            <span class="menu-item-price">₹229</span>
+          </div>
+          <p class="menu-item-desc">Spicy Paneer Cubes tossed in Dynamite Red Gochujang sauce, trapped in a toasted tortilla with melting mozzarella. Cheesy, spicy, and satisfying.</p>
+          <div class="menu-badges"><span class="mbadge mbadge--hot">🌶 Spicy</span></div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Gangnam Glaze Paneer Quesadilla [4 Pcs]</span>
+            <span class="menu-item-price">₹229</span>
+          </div>
+          <p class="menu-item-desc">The K-Drama snack. Diced Paneer glazed in Gangnam Soy-Garlic sauce, layered with cheese and crunchy fried onions. A perfect sweet-savory bite.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Pink Velvet Paneer Quesadilla [4 Pcs]</span>
+            <span class="menu-item-price">₹239</span>
+          </div>
+          <p class="menu-item-desc">Richness overload. Soft Paneer cubes marinated in Pink Velvet sauce, layered with double cheese (Slice + Mozzarella). Creamy comfort food in a pocket.</p>
+          <div class="menu-badges"><span class="mbadge mbadge--best">⭐ Best Seller</span></div>
+        </div>
+
+      </div><!-- /panel-quesadillas -->
+
+      <!-- ══ PANEL 6: Ramyun ══ -->
+      <div class="menu-panel" id="panel-ramyun" role="tabpanel">
+        <div class="menu-cat-header">
+          <span class="menu-cat-emoji">🍜</span>
+          <span class="menu-cat-title">Seoul Street Ramyun Noodles</span>
+        </div>
+
+        <div class="menu-subcat">Dry-Stir Ramyun Noodles</div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Volcanic Fire Spicy Ramyun Noodles</span>
+            <span class="menu-item-price">₹225</span>
+          </div>
+          <p class="menu-item-desc">An extra hot dry-stir noodle bowl for spice lovers. Tossed with a crunchy veggie mix and topped with toasted sesame, spring onion, and seaweed.</p>
+          <div class="menu-badges"><span class="mbadge mbadge--hot">🚨 Extra Hot</span></div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Tangy Kimchi Ramyun Noodles</span>
+            <span class="menu-item-price">₹225</span>
+          </div>
+          <p class="menu-item-desc">Korean spicy noodles tossed with a crunchy veggie mix, featuring a bold, tangy kimchi kick.</p>
+          <div class="menu-badges"><span class="mbadge mbadge--hot">🌶 Spicy</span></div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Cheesy Melt Ramyun Noodles</span>
+            <span class="menu-item-price">₹239</span>
+          </div>
+          <p class="menu-item-desc">Spicy dry-stir noodles with a rich, creamy cheese finish. Tossed with a crunchy veggie mix.</p>
+          <div class="menu-badges"><span class="mbadge mbadge--best">⭐ Crowd Fave</span></div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Viral Spicy Carbonara Ramyun Noodles</span>
+            <span class="menu-item-price">₹239</span>
+          </div>
+          <p class="menu-item-desc">The K-Drama viral sensation! A rich, creamy, and cheesy dry-stir bowl with a signature spicy kick. Tossed with a crunchy veggie mix and topped with sesame and seaweed.</p>
+          <div class="menu-badges">
+            <span class="mbadge mbadge--viral">📸 Viral Sensation</span>
+            <span class="mbadge mbadge--hot">🌶 Spicy</span>
+          </div>
+        </div>
+
+      </div><!-- /panel-ramyun -->
+
+      <!-- ══ PANEL 7: Desserts ══ -->
+      <div class="menu-panel" id="panel-desserts" role="tabpanel">
+        <div class="menu-cat-header">
+          <span class="menu-cat-emoji">🥞</span>
+          <span class="menu-cat-title">Desserts, Ice Cream &amp; Waffles</span>
+        </div>
+
+        <div class="menu-subcat">Seoul Sundaes &amp; Ice Cream</div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Boba Bear Signature Ice Cream Sundae</span>
+            <span class="menu-item-price">₹149</span>
+          </div>
+          <p class="menu-item-desc">Our bestseller. Two scoops of premium vanilla ice cream topped with warm brown sugar lava and our signature chewy tapioca pearls.</p>
+          <div class="menu-badges"><span class="mbadge mbadge--best">⭐ Bestseller</span></div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Seoul Berry Popping Ice Cream Sundae</span>
+            <span class="menu-item-price">₹169</span>
+          </div>
+          <p class="menu-item-desc">Vibrant and fruity. Premium vanilla ice cream topped with sweet berry glaze and bursting strawberry popping boba.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Nutella Oreo Crunch Ice Cream Sundae</span>
+            <span class="menu-item-price">₹179</span>
+          </div>
+          <p class="menu-item-desc">The ultimate chocolate fix. Premium ice cream smothered in a heavy Nutella drizzle and topped with crushed Oreo cookies.</p>
+          <div class="menu-badges"><span class="mbadge mbadge--viral">📸 Viral</span></div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Gangnam Caramel Cold Coffee Sundae</span>
+            <span class="menu-item-price">₹189</span>
+          </div>
+          <p class="menu-item-desc">A premium adult dessert. Vanilla ice cream poured over with a shot of rich cold coffee, drizzled with caramel syrup, and topped with chewy tapioca pearls.</p>
+        </div>
+
+        <div class="menu-subcat">Sweet Waffles &amp; Dessert Bites</div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Choco-Cloud Marshmallow Pops [2 Pcs]</span>
+            <span class="menu-item-price">₹99</span>
+          </div>
+          <p class="menu-item-desc">Fluffy white marshmallows on a stick, dipped generously in our rich chocolate sauce. A sweet, gooey treat.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Classic Seoul Vanilla Sweet Waffle</span>
+            <span class="menu-item-price">₹229</span>
+          </div>
+          <p class="menu-item-desc">Crispy on the outside, fluffy inside. A classic golden waffle infused with vanilla. Served warm with a side of maple syrup.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">The Viral Nutella Chocolate Waffle</span>
+            <span class="menu-item-price">₹259</span>
+          </div>
+          <p class="menu-item-desc">The ultimate indulgence. Our golden vanilla waffle smothered completely in rich, warm Nutella. Messy, heavy, and perfect for your late-night cravings.</p>
+          <div class="menu-badges"><span class="mbadge mbadge--viral">📸 Viral</span></div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Gangnam Dark Mocha Coffee Waffle</span>
+            <span class="menu-item-price">₹269</span>
+          </div>
+          <p class="menu-item-desc">Decadent dark chocolate batter infused with aromatic coffee. A rich, bittersweet treat drizzled with extra dark chocolate sauce.</p>
+        </div>
+
+      </div><!-- /panel-desserts -->
+
+      <!-- ══ PANEL 8: Beverages ══ -->
+      <div class="menu-panel" id="panel-beverages" role="tabpanel">
+        <div class="menu-cat-header">
+          <span class="menu-cat-emoji">🧋</span>
+          <span class="menu-cat-title">The Boba Bear Beverage Studio</span>
+        </div>
+
+        <div class="menu-subcat">Signature Boba Bubble Tea [350ml]</div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Gangnam Style Iced Cold Coffee (Boba)</span>
+            <span class="menu-item-price">₹199</span>
+          </div>
+          <p class="menu-item-desc">Bold Korean-style blended coffee, creamy and smooth. Served with chewy tapioca pearls in a cup streaked with rich chocolate 'mud-slide' ribbons.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Hong Kong Tiger Milk Tea (Boba)</span>
+            <span class="menu-item-price">₹239</span>
+          </div>
+          <p class="menu-item-desc">Authentic, bold Hong Kong street-style black tea. Poured over chewy tapioca pearls and our signature caramelized 'Tiger Stripes'.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Bangkok Street Thai Bubble Tea (Boba)</span>
+            <span class="menu-item-price">₹249</span>
+          </div>
+          <p class="menu-item-desc">Vibrant, sweet, and incredibly refreshing. A bold, spiced orange Thai tea blended over a fresh white milk base and chewy pearls.</p>
+          <div class="menu-badges"><span class="mbadge mbadge--best">⭐ Signature</span></div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Purple Rain Taro Bubble Tea (Boba)</span>
+            <span class="menu-item-price">₹259</span>
+          </div>
+          <p class="menu-item-desc">A swirling galaxy in a cup. Sweet, nutty taro root blended into a creamy purple slush, served in a cloud-smeared cup with chewy tapioca pearls.</p>
+          <div class="menu-badges"><span class="mbadge mbadge--best">⭐ Signature</span></div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Dirty Cheesecake Bubble Tea (Boba)</span>
+            <span class="menu-item-price">₹259</span>
+          </div>
+          <p class="menu-item-desc">Drink your dessert. Rich New York Cheesecake blended frosty and smooth, poured into a cup dripping with golden butterscotch lava and dusted with a cocoa crust.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Zen Master Matcha Bubble Tea (Boba)</span>
+            <span class="menu-item-price">₹269</span>
+          </div>
+          <p class="menu-item-desc">Earthy, premium Japanese matcha whisked into a creamy, frosty blend. Anchored with rich dark chocolate and finished with a premium cocoa dusting.</p>
+        </div>
+
+        <div class="menu-subcat">Layered Iced Coffees [350ml]</div>
+        <p class="menu-item-desc" style="padding:6px 0 10px; color:rgba(244,240,230,0.35); font-size:0.66rem;">🛵 Shake well before piercing the seal!</p>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Hazelnut Hug Iced Coffee (Boba)</span>
+            <span class="menu-item-price">₹239</span>
+          </div>
+          <p class="menu-item-desc">Aromatic toasted hazelnut layered with fresh milk and dark espresso-style coffee over chewy boba.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Butterscotch-Caramel Pop Iced Coffee (Boba)</span>
+            <span class="menu-item-price">₹249</span>
+          </div>
+          <p class="menu-item-desc">Rich butterscotch anchored at the bottom, layered with sweet caramel milk and dark roasted coffee.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Seoul Tiramisu Iced Coffee (Boba)</span>
+            <span class="menu-item-price">₹249</span>
+          </div>
+          <p class="menu-item-desc">A liquid dessert. Tiramisu-infused milk layered with dark coffee and boba, dusted with bakery cocoa.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">K-Cinema Popcorn Iced Coffee (Boba)</span>
+            <span class="menu-item-price">₹249</span>
+          </div>
+          <p class="menu-item-desc">The ultimate Korean cafe trend. Roasted coffee layered over sweet, rich caramel popcorn milk and boba.</p>
+          <div class="menu-badges"><span class="mbadge mbadge--viral">📸 Trending</span></div>
+        </div>
+
+        <div class="menu-subcat">The Matcha Tea Studio [350ml]</div>
+        <p class="menu-item-desc" style="padding:6px 0 10px; color:rgba(244,240,230,0.35); font-size:0.66rem;">🛵 Shake well before piercing the seal!</p>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Purple Rain Layered Matcha (Boba)</span>
+            <span class="menu-item-price">₹289</span>
+          </div>
+          <p class="menu-item-desc">A stunning 3-tier gradient. Thick, sweet purple Taro paste at the base, creamy milk in the middle, and a premium matcha float on top.</p>
+          <div class="menu-badges"><span class="mbadge mbadge--viral">📸 Visual Virality</span></div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Wild Berry Dirty Matcha (Boba)</span>
+            <span class="menu-item-price">₹289</span>
+          </div>
+          <p class="menu-item-desc">Deep, dark mixed berries anchored at the bottom, layered with sweet milk and earthy matcha. A striking purple and green contrast.</p>
+        </div>
+
+        <div class="menu-subcat">The Cloud Foam Milks [350ml]</div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Cotton Candy Cloud Milk (Boba)</span>
+            <span class="menu-item-price">₹249</span>
+          </div>
+          <p class="menu-item-desc">Nostalgic, bright, and highly photogenic. Sweet cotton candy milk topped with a thick, velvety Pink Velvet foam float and boba.</p>
+          <div class="menu-badges"><span class="mbadge mbadge--viral">📸 Insta-Worthy</span></div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Seoul Tiramisu Cloud Milk (Boba)</span>
+            <span class="menu-item-price">₹259</span>
+          </div>
+          <p class="menu-item-desc">Rich Tiramisu milk poured over boba, topped with our signature thick Tiramisu cheese-foam and dusted with dark cocoa.</p>
+        </div>
+
+        <div class="menu-subcat">Artisan Iced Teas [350ml]</div>
+        <p class="menu-item-desc" style="padding:6px 0 10px; color:rgba(244,240,230,0.35); font-size:0.66rem;">🛵 Upgraded with zero carbonation for spill-free delivery!</p>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Electric Blue Fruit Iced Tea (Popping Boba)</span>
+            <span class="menu-item-price">₹179</span>
+          </div>
+          <p class="menu-item-desc">Striking blueberry iced tea served with bursting blueberry popping boba and a fresh lemon wheel.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Desi Drama Kala Khatta Iced Tea (Popping Boba)</span>
+            <span class="menu-item-price">₹179</span>
+          </div>
+          <p class="menu-item-desc">Tangy, spicy, and nostalgic. The classic Indian summer flavor elevated over ice with popping boba.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Pink Berry Fruit Iced Tea (Popping Boba)</span>
+            <span class="menu-item-price">₹179</span>
+          </div>
+          <p class="menu-item-desc">Sweet, jammy, and classic. Refreshing strawberry iced tea served with strawberry popping boba.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Watermelon Sugar Iced Tea (Popping Boba)</span>
+            <span class="menu-item-price">₹179</span>
+          </div>
+          <p class="menu-item-desc">Crisp and wildly refreshing watermelon tea served with bursting strawberry boba.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Sour Candy Apple Fruit Iced Tea (Popping Boba)</span>
+            <span class="menu-item-price">₹179</span>
+          </div>
+          <p class="menu-item-desc">Tart, sweet, and bright green. Green apple tea paired with matching green apple popping boba.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Zesty Seoul Lime Iced Tea (Jelly)</span>
+            <span class="menu-item-price">₹179</span>
+          </div>
+          <p class="menu-item-desc">The ultimate fizz-free refresher. Mint mojito-infused water, chewy jelly, and fresh mint leaves.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Pretty in Peach Iced Tea (Popping Boba)</span>
+            <span class="menu-item-price">₹179</span>
+          </div>
+          <p class="menu-item-desc">A tropical escape. Sweet peach tea poured over bursting fruit boba.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Seoul Pink Grapefruit Tea (Popping Boba)</span>
+            <span class="menu-item-price">₹189</span>
+          </div>
+          <p class="menu-item-desc">Tart, refreshing pink grapefruit layered with strawberry popping boba and a fresh citrus wheel.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Jeju Island Mint Mojito (Popping Boba)</span>
+            <span class="menu-item-price">₹189</span>
+          </div>
+          <p class="menu-item-desc">The ultimate fizz-free refresher. Mint mojito-infused water, green apple popping boba, and fresh mint leaves.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Summer in Seoul Fruit Iced Tea (Popping Boba)</span>
+            <span class="menu-item-price">₹189</span>
+          </div>
+          <p class="menu-item-desc">A tropical escape. Sweet mango and peach tea poured over bursting fruit boba.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Lychee Lush Fruit Iced Tea (Popping Boba)</span>
+            <span class="menu-item-price">₹189</span>
+          </div>
+          <p class="menu-item-desc">Delicate, floral, and sweet litchi black tea served with chewy jelly or popping boba.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Passion Punch Iced Tea (Jelly)</span>
+            <span class="menu-item-price">₹189</span>
+          </div>
+          <p class="menu-item-desc">Exotic passionfruit with real suspended seeds, poured over ice, cold water, and popping boba.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Ruby Hibiscus Iced Tea (Jelly)</span>
+            <span class="menu-item-price">₹189</span>
+          </div>
+          <p class="menu-item-desc">Deep, tart, and floral hibiscus tea served over ice with sweet litchi jelly.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Magic Galaxy Iced Tea (Jelly)</span>
+            <span class="menu-item-price">₹199</span>
+          </div>
+          <p class="menu-item-desc">A mesmerizing, color-changing summer cooler. Natural blue butterfly pea flower tea infused with zesty lime. Watch it turn purple!</p>
+          <div class="menu-badges"><span class="mbadge mbadge--viral">📸 Insta-Worthy</span></div>
+        </div>
+
+        <div class="menu-subcat">Classic Bubble Teas &amp; Shakes [350ml]</div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Midnight Chocolate Boba Shake</span>
+            <span class="menu-item-price">₹219</span>
+          </div>
+          <p class="menu-item-desc">A classic, rich chocolate shake blended smooth and served over boba.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Red Velvet Cake Boba Shake</span>
+            <span class="menu-item-price">₹219</span>
+          </div>
+          <p class="menu-item-desc">Sweet, cake-batter flavor blended into a frosty red shake with boba.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Tender Coconut Boba Shake</span>
+            <span class="menu-item-price">₹219</span>
+          </div>
+          <p class="menu-item-desc">Light, sweet, and tropical coconut milk blended smooth with boba.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">K-Pop Bubblegum Shake (Boba)</span>
+            <span class="menu-item-price">₹219</span>
+          </div>
+          <p class="menu-item-desc">Nostalgic and sweet bubblegum flavor blended into a creamy shake.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Seoul Berry Bubble Tea (Boba)</span>
+            <span class="menu-item-price">₹219</span>
+          </div>
+          <p class="menu-item-desc">A fruity treat. Creamy milk tea infused with sweet blueberry flavor. Served with chewy tapioca pearls.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Korean Strawberry Bubble Tea (Boba)</span>
+            <span class="menu-item-price">₹219</span>
+          </div>
+          <p class="menu-item-desc">Pure nostalgia. Fresh strawberry blended with creamy milk for a pink delight. Served with chewy tapioca pearls.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Seoul Melon Bubble Tea (Boba)</span>
+            <span class="menu-item-price">₹219</span>
+          </div>
+          <p class="menu-item-desc">Inspired by the famous Korean treat. Sweet honeydew melon blended into a creamy milk base. Served with chewy tapioca pearls.</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Tropical Pina Colada Bubble Tea (Boba)</span>
+            <span class="menu-item-price">₹219</span>
+          </div>
+          <p class="menu-item-desc">A tropical getaway in a cup. Sweet pineapple and creamy coconut blended smooth with chewy tapioca pearls.</p>
+        </div>
+
+      </div><!-- /panel-beverages -->
+
+    </div>
+
+  </section>
+
+  <!-- ══════════ BEVERAGE STUDIO — DROP 001 ══════════ -->
+  <div class="drop-band drop-band--sky">
+    <div class="drop-band-inner">
+
+      <div class="section-label">✦ Menu Highlights</div>
+      <div class="drop-section-number">DROP 001</div>
+      <h2 class="drop-section-heading">THE<br/>BEVERAGE<br/>STUDIO.</h2>
+
+      <div class="virality-bar">
+        <span class="virality-bar-icon">⚗️</span>
+        <span>Visual Virality: Experience our Specific Gravity Layering.</span>
+      </div>
+
+      <!-- Purple Rain Layered Matcha -->
+      <div class="drop-card">
+        <div class="drop-card-visual visual--purple-rain">
+          <img src="assets/images/products/purple-rain-matcha.jpg"
+               alt="Purple Rain Layered Matcha Bubble Tea with five specific gravity layers"
+               loading="lazy" />
+          <div class="layer-labels">
+            <div class="layer-label-item">Purple Foam</div>
+            <div class="layer-label-item">Taro Milk</div>
+            <div class="layer-label-item">Matcha</div>
+            <div class="layer-label-item">Brown Sugar</div>
+            <div class="layer-label-item">Pearls</div>
+          </div>
+        </div>
+        <div class="drop-card-body">
+          <span class="drop-card-tag">Signature Series</span>
+          <div class="drop-card-name">Purple Rain<br/>Layered Matcha</div>
+          <div class="drop-card-desc">Ceremonial matcha meets taro milk — five distinct layers poured by hand using specific gravity. Each sip hits a different note.</div>
+          <div class="drop-card-footer">
+            <div class="drop-card-price">₹249</div>
+            <a href="https://www.swiggy.com/direct/brand/741763?source=swiggy-direct&subSource=instagram" class="drop-card-cta" target="_blank" rel="noopener noreferrer">Order Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bangkok Sunset Thai Boba -->
+      <div class="drop-card">
+        <div class="drop-card-visual visual--bangkok-sunset">
+          <img src="assets/images/products/bangkok-sunset-boba.jpg"
+               alt="Bangkok Sunset Thai Bubble Tea with condensed milk float over spiced Thai tea"
+               loading="lazy" />
+          <div class="layer-labels">
+            <div class="layer-label-item">Cream Cap</div>
+            <div class="layer-label-item">Cond. Milk</div>
+            <div class="layer-label-item">Thai Tea</div>
+            <div class="layer-label-item">Spiced Base</div>
+            <div class="layer-label-item">Pearls</div>
+          </div>
+        </div>
+        <div class="drop-card-body">
+          <span class="drop-card-tag">Signature Series</span>
+          <div class="drop-card-name">Bangkok Sunset<br/>Thai Boba</div>
+          <div class="drop-card-desc">Spiced orange Thai tea with a condensed milk float — density difference creates the iconic sunset gradient. Don't stir. Enjoy the show.</div>
+          <div class="drop-card-footer">
+            <div class="drop-card-price">₹229</div>
+            <a href="https://link.zomato.com/xqzv/rshare?id=12538351530563d18" class="drop-card-cta" target="_blank" rel="noopener noreferrer">Order Now</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══════════ K-STREET BITES — DROP 002 ══════════ -->
+  <div class="drop-band drop-band--dark">
+    <div class="drop-band-inner">
+
+      <div class="section-label">✦ Menu Highlights</div>
+      <div class="drop-section-number">DROP 002</div>
+      <h2 class="drop-section-heading">K-STREET<br/>BITES.</h2>
+
+      <!-- Gamja Potato Corn Dog -->
+      <div class="drop-card">
+        <div class="drop-card-visual visual--gamja">
+          <img src="assets/images/products/gamja-corn-dog.jpg"
+               alt="Gamja Potato Korean corn dog with crispy potato crust and mozzarella pull"
+               loading="lazy" />
+        </div>
+        <div class="drop-card-body">
+          <span class="drop-card-tag">Street Eats</span>
+          <div class="drop-card-name">Gamja Potato<br/>Corn Dog</div>
+          <div class="drop-card-desc">Mozzarella core wrapped in a crispy potato cube crust. Rolled in gochujang mayo and finished with a sugar dusting. The one everyone stops to photograph.</div>
+          <div class="drop-card-footer">
+            <div class="drop-card-price">₹179</div>
+            <a href="https://www.swiggy.com/direct/brand/741763?source=swiggy-direct&subSource=instagram" class="drop-card-cta" target="_blank" rel="noopener noreferrer">Order Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pink Velvet Cheesy Veg Burger -->
+      <div class="drop-card">
+        <div class="drop-card-visual visual--pink-velvet">
+          <img src="assets/images/products/pink-velvet-burger.jpg"
+               alt="Pink Velvet Cheesy Veg Burger with beetroot bun and double cheese pull"
+               loading="lazy" />
+        </div>
+        <div class="drop-card-body">
+          <span class="drop-card-tag">Street Eats</span>
+          <div class="drop-card-name">Pink Velvet<br/>Cheesy Veg Burger</div>
+          <div class="drop-card-desc">Beetroot-stained pink velvet bun, double cheese pull, crispy veg patty, rose garlic aioli. Pure visual virality between two buns.</div>
+          <div class="drop-card-footer">
+            <div class="drop-card-price">₹219</div>
+            <a href="https://link.zomato.com/xqzv/rshare?id=12538351530563d18" class="drop-card-cta" target="_blank" rel="noopener noreferrer">Order Now</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══════════ K-DRAMA COMBOS ══════════ -->
+  <div class="combo-band">
+    <div class="combo-band-inner">
+
+      <div class="section-label">✦ Combos</div>
+      <h2 class="combo-band-heading">K-DRAMA<br/>COMBOS.</h2>
+      <p class="combo-band-sub">Because S-Tier drinks deserve S-Tier bites.</p>
+
+      <div class="combo-card">
+        <div class="combo-visual">
+          <img src="assets/images/products/borahae-combo.jpg"
+               alt="Borahae Purple Combo with steamed momos, K-street fries, and taro boba"
+               loading="lazy" />
+        </div>
+        <div class="combo-body">
+          <div class="combo-eyebrow">
+            <div class="combo-eyebrow-dot"></div>
+            <span class="combo-eyebrow-tag">Limited Combo · Borahae Edition</span>
+          </div>
+          <div class="combo-name">BORAHAE<br/>PURPLE COMBO</div>
+          <div class="combo-subtitle">"I purple you" — and we purple your whole meal.</div>
+          <div class="combo-pills">
+            <span class="combo-pill">🥟 Steamed Momos</span>
+            <span class="combo-pill">🍟 K-Street Fries</span>
+            <span class="combo-pill">🧋 Taro Boba</span>
+          </div>
+          <div class="combo-footer">
+            <div class="combo-price-block">
+              <div class="combo-price">₹449</div>
+              <div class="combo-savings">Save ₹100 vs. ordering à la carte</div>
+            </div>
+            <a href="https://www.swiggy.com/direct/brand/741763?source=swiggy-direct&subSource=instagram" class="combo-order-btn" target="_blank" rel="noopener noreferrer">Order Combo</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══════════ AESTHETIC DROP — MERCH ══════════ -->
+  <section class="section">
+    <div class="section-label">✦ The Drop</div>
+    <h2 class="heading text-gold" style="font-size:2.2rem; line-height:1.05;">THE<br/>AESTHETIC<br/>DROP.</h2>
+    <p style="font-size:0.82rem; color:rgba(244,240,230,0.45); font-weight:700; margin-top:8px; letter-spacing:0.04em;">
+      Limited edition sticker packs. Available in-store only.
+    </p>
+
+    <div class="merch-grid">
+
+      <div class="merch-card">
+        <div class="merch-card-visual">
+          <img src="assets/images/drops/grand-line-sticker.png"
+               alt="Grand Line Collection — limited edition die-cut sticker pack"
+               loading="lazy" />
+        </div>
+        <div class="merch-card-body">
+          <span class="merch-drop-tag">Drop 001</span>
+          <div class="merch-card-name">Grand Line<br/>Collection</div>
+          <div class="merch-card-desc">Die-cut stickers inspired by the journey. Holographic finish.</div>
+          <div class="merch-card-status">In-Store Only</div>
+        </div>
+      </div>
+
+      <div class="merch-card">
+        <div class="merch-card-visual">
+          <img src="assets/images/drops/neo-seoul-sticker.png"
+               alt="Neo-Seoul Collection — limited edition die-cut sticker pack"
+               loading="lazy" />
+        </div>
+        <div class="merch-card-body">
+          <span class="merch-drop-tag">Drop 002</span>
+          <div class="merch-card-name">Neo-Seoul<br/>Collection</div>
+          <div class="merch-card-desc">K-Street vibes, glossy die-cut finish. Very limited.</div>
+          <div class="merch-card-status">In-Store Only</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider"><div class="divider-line"></div><div class="divider-icon">🐻</div><div class="divider-line"></div></div>
+
+  <!-- ══════════ VIBE ══════════ -->
+  <section class="section vibe-section">
+    <div class="section-label">✦ Our Vibe</div>
+    <h2 class="heading text-gold" style="font-size:2.2rem; line-height:1.05;">THE<br/>LORE.</h2>
+
+    <div class="vibe-card">
+      <p class="vibe-text">
+        Boba Bear was born on <strong>K-Street</strong> — the strip that never sleeps.<br/><br/>
+        We make boba the <strong>obsessive way</strong>: fresh pearls every two hours, no powder concentrates, real tea brewed in small batches. Pair it with Korean street snacks done right, and you've got the <strong>S-Tier combo</strong> the city didn't know it needed.
+      </p>
+    </div>
+
+    <div class="vibe-stats">
+      <div class="stat-box">
+        <div class="stat-number">2hr</div>
+        <div class="stat-label">Fresh Pearls</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number">12+</div>
+        <div class="stat-label">Boba Styles</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number">★4.9</div>
+        <div class="stat-label">Rated</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"><div class="divider-line"></div><div class="divider-icon">✦</div><div class="divider-line"></div></div>
+
+  <!-- ══════════ ORDER NOW — CLOUD KITCHEN ══════════ -->
+  <section class="section">
+    <div class="section-label">✦ Order Now</div>
+    <h2 class="heading text-gold" style="font-size:2.2rem; line-height:1.05;">DELIVERY<br/>ONLY.</h2>
+
+    <div class="location-card">
+
+      <div class="loc-row">
+        <div class="loc-icon">🏭</div>
+        <div>
+          <div class="loc-title">Exclusive Delivery Kitchen</div>
+          <div class="loc-value">Dehradun, Uttarakhand<br/><span style="font-size:0.78em; opacity:0.65;">Cloud Kitchen — No Dine-In · No Walk-In</span></div>
+        </div>
+      </div>
+
+      <div class="loc-row">
+        <div class="loc-icon">🕐</div>
+        <div>
+          <div class="loc-title">Delivery Hours</div>
+          <div class="loc-value">Noon – 11 PM · All days</div>
+        </div>
+      </div>
+
+      <div class="loc-row">
+        <div class="loc-icon">🛵</div>
+        <div>
+          <div class="loc-title">Order Direct</div>
+          <div class="loc-value">Available strictly via Swiggy, Zomato &amp; WhatsApp</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════ SOCIAL PROOF ══════════ -->
+  <section class="section">
+    <div class="section-label">✦ Social Proof</div>
+    <h2 class="heading text-gold" style="font-size:2.2rem; line-height:1.05;">NOW<br/>TRENDING.</h2>
+
+    <div class="trending-block">
+      <div class="trending-fire">🔥</div>
+      <div class="trending-content">
+        <div class="trending-headline">TRENDING IN DEHRADUN</div>
+        <div class="trending-subline">on Swiggy &amp; Zomato right now</div>
+      </div>
+      <div class="trending-platforms">
+        <div class="platform-badge platform-badge--swiggy">
+          <!-- Lucide shopping-bag -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          Swiggy
+        </div>
+        <div class="platform-badge platform-badge--zomato">
+          <!-- Lucide utensils -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3z"/><path d="M21 15v7"/>
+          </svg>
+          Zomato
+        </div>
+      </div>
+    </div>
+
+    <div class="review-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Purple Rain is the most beautiful drink I've seen. Tastes even better than it looks."</p>
+        <div class="review-author">@riya_s</div>
+        <div class="review-source review-source--swiggy">via Swiggy</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Pink Velvet burger + Taro combo is criminally good. Already been back twice."</p>
+        <div class="review-author">@foodie_ddn</div>
+        <div class="review-source review-source--zomato">via Zomato</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+
+      <div class="footer-brand-block">
+        <div class="footer-logo">Boba<span>Bear</span></div>
+        <div class="footer-tagline">S-Tier Sips. K-Street Drip. For the Unbothered.</div>
+      </div>
+
+      <hr class="footer-hr" />
+
+      <div class="footer-legal-block">
+        <div class="footer-stamp-wrap">
+          <img src="assets/images/logos/stamp-white.svg"
+               alt="NIVEDHYA11 HOSPITALITY PRIVATE LIMITED Official Brand Stamp"
+               loading="lazy"
+               class="footer-stamp" />
+        </div>
+        <p class="footer-entity-text">
+          Boba Bear is a brand owned and operated by<br/>
+          <strong>NIVEDHYA11 HOSPITALITY PRIVATE LIMITED.</strong>
+        </p>
+        <p class="footer-address-text">📍 Dehradun, Uttarakhand (Cloud Kitchen — Delivery Only. No Dine-In).</p>
+
+        <div class="footer-policy-links">
+          <a href="index.html" class="footer-policy-link">Home</a>
+          <span class="footer-policy-sep" aria-hidden="true"></span>
+          <a href="privacy.html" class="footer-policy-link">Privacy Policy</a>
+          <span class="footer-policy-sep" aria-hidden="true"></span>
+          <a href="terms.html" class="footer-policy-link">Terms of Service</a>
+        </div>
+
+        <p class="footer-copyright">
+          &copy; 2025 NIVEDHYA11 HOSPITALITY PRIVATE LIMITED.<br/>All rights reserved.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ══════════ FLOATING DOCK — THE COMMAND CENTER ══════════ -->
+  <div id="delivery-links" class="dock" role="navigation" aria-label="Order & Contact">
+    <div class="dock-inner">
+
+      <!-- Swiggy: shopping bag icon (Lucide) -->
+      <a href="https://www.swiggy.com/direct/brand/741763?source=swiggy-direct&subSource=instagram" class="dock-btn dock-btn--swiggy" aria-label="Order on Swiggy" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 0 1-8 0"/>
+        </svg>
+        <span>Swiggy</span>
+      </a>
+
+      <!-- Zomato: utensils icon (Lucide) -->
+      <a href="https://link.zomato.com/xqzv/rshare?id=12538351530563d18" class="dock-btn dock-btn--zomato" aria-label="Order on Zomato" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/>
+          <path d="M7 2v20"/>
+          <path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3z"/>
+          <path d="M21 15v7"/>
+        </svg>
+        <span>Zomato</span>
+      </a>
+
+      <!-- WhatsApp: official brand icon path (Font Awesome) -->
+      <a href="https://wa.me/919876543210" class="dock-btn dock-btn--whatsapp" aria-label="Chat on WhatsApp" rel="noopener noreferrer" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+        </svg>
+        <span>WhatsApp</span>
+      </a>
+
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var tabs = document.querySelectorAll('.menu-tab');
+      var panels = document.querySelectorAll('.menu-panel');
+
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          var target = this.dataset.panel;
+
+          tabs.forEach(function (item) {
+            item.classList.remove('is-active');
+            item.setAttribute('aria-selected', 'false');
+          });
+
+          panels.forEach(function (panel) {
+            panel.classList.remove('is-active');
+          });
+
+          this.classList.add('is-active');
+          this.setAttribute('aria-selected', 'true');
+
+          var panel = document.getElementById('panel-' + target);
+          if (panel) {
+            panel.classList.add('is-active');
+          }
+
+          this.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>
