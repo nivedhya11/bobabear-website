@@ -138,7 +138,7 @@ Current external actions wired into the site:
 
 - **Swiggy:** `https://www.swiggy.com/direct/brand/741763?source=swiggy-direct&subSource=instagram`
 - **Zomato:** `https://link.zomato.com/xqzv/rshare?id=12538351530563d18`
-- **WhatsApp:** `https://wa.me/919876543210?text=I%20want%20to%20Catch%20the%20Drop.%20Send%20the%20menu%21`
+- **WhatsApp:** `https://wa.me/919259894495?text=I%20want%20to%20Catch%20the%20Drop.%20Send%20the%20menu%21`
 
 ## Maintenance Notes
 
