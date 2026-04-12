@@ -1,97 +1,150 @@
 # Boba Bear Website
 
-Static brand website for **Boba Bear**, a delivery-only Indo-Korean cloud kitchen in **Dehradun, Uttarakhand, India**.
+Static website for **Boba Bear**, a premium **global lifestyle brand** built around K-street aesthetics, S-tier sips, and direct-to-consumer digital drops.
 
-## Current Brand Messaging
+## Brand System
 
 - **Primary headline:** `FOR THE UNBOTHERED.`
 - **Primary subheadline:** `S-Tier Sips. K-Street Drip.`
-- **CTA phrase:** `Catch the Drop.`
-- **Brand voice:** Premium, playful, K-street inspired, delivery-first.
+- **Primary CTA:** `Catch the Drop.`
+- **Brand voice:** Premium, aloof, streetwear-inspired, culturally plugged-in
+- **Origin language:** `Origin: Bharat`
+- **Network language:** `Direct-to-Consumer Network`, `Digital Drops`, `Global Lifestyle Brand`
 
 ## Business Reference
 
 - **Brand name:** Boba Bear
 - **Parent company:** Nivedhya11 Hospitality Private Limited
-- **Business model:** Delivery-only cloud kitchen
-- **No dine-in:** Yes
-- **Service area:** Dehradun
+- **Current origin copy:** `📍 Origin: Bharat | Direct-to-Consumer Network`
+- **Operating model:** Digital drops and delivery-first ordering
+- **Customer ordering channels:** Swiggy, Zomato, WhatsApp
 - **Contact email:** `nivedhya11hospitality@gmail.com`
 
 ## Project Files
 
-- `index.html` — Main landing page, menu, SEO metadata, schema markup, and branded sections
-- `privacy.html` — Privacy Policy page
-- `terms.html` — Terms of Service page
-- `assets/` — Logos, product visuals, mascot art, stickers, and related static assets
+- `index.html` — Main landing page
+- `privacy.html` — Privacy page (`Network Privacy & Data`)
+- `terms.html` — Terms page (`Terms of Access`)
+- `assets/images/logos/` — Brand logo and white stamp
+- `assets/images/ui/` — Hero mascot and UI reference assets
+- `assets/images/products/` — Featured product photography
 
-## Current Page Structure
+## Homepage Structure (`index.html`)
 
-### `index.html`
+The homepage is a **high-impact highlights page**, not a long full-menu page.
 
-- Sticky branded top bar
-- Hero section with main headline and aesthetic badges
-- Infinite scrolling marquee with brand/product messaging
-- Full menu section with compact tabbed category layout
-- Highlight sections:
-  - Beverage Studio
-  - K-Street Bites
-  - K-Drama Combos
-  - Aesthetic Drop
-  - Lore
-  - Delivery Only
-  - Social Proof
-- Footer linking:
-  - `index.html`
+### Navigation
+
+- `Current Drop`
+- `Beverage Studio`
+- `K-Street Bites`
+- `Global Network`
+
+### Hero
+
+- Headline: `FOR THE UNBOTHERED.`
+- Subheadline: `S-Tier Sips. K-Street Drip.`
+- Support line: `A global lifestyle brand. Chapter 01: Bharat.`
+- Static badges:
+  - `Fresh Daily`
+  - `No Shortcuts`
+  - `K-Street OG`
+  - `Catch the Drop`
+- Primary button: `View Current Drop`
+
+### Marquee
+
+Current ticker copy:
+
+`🐻 ✦ FOR THE UNBOTHERED ✦ S-TIER SIPS. K-STREET DRIP. ✦ CATCH THE DROP ✦ PURPLE RAIN MATCHA ✦ GAMJA CORN DOG ✦ SEOUL STREET MOMOS ✦ 🐻`
+
+### The Current Drop
+
+Only these 5 featured items appear on the homepage:
+
+- `Borahae Purple Combo` — `₹449`
+- `Purple Rain Layered Matcha` — `₹289`
+- `Bangkok Street Thai Bubble Tea` — `₹249`
+- `Gamja Potato Corn Dog` — `₹179`
+- `Pink Velvet Cheesy Veg Burger` — `₹169`
+
+### Archive CTA
+
+- Button text: `Access Full Archive on Swiggy & Zomato`
+
+### Digital Drop Access
+
+- Section title: `CATCH THE DROP.`
+- Supporting copy: `The Boba Bear network currently fulfills drops via Swiggy, Zomato, and WhatsApp. Quietly efficient. No unnecessary friction.`
+- Buttons:
+  - `Order on Swiggy`
+  - `Order on Zomato`
+  - `Order on WhatsApp`
+
+### Footer
+
+- Company name: `Nivedhya11 Hospitality Private Limited`
+- Origin line: `📍 Origin: Bharat | Direct-to-Consumer Network`
+- Brand line: `Boba Bear is a global lifestyle brand. Our QSR collections are currently optimized for digital delivery.`
+- Legal links:
   - `privacy.html`
   - `terms.html`
 
-### Legal Pages
+## Current Asset Mapping
 
-Both `privacy.html` and `terms.html`:
+### Logos and UI
 
-- Use the same Night Forest / Boba Cream visual language as the homepage
-- Use Nunito for readable legal copy
-- Include the same branded top bar and footer pattern
-- Include cross-links between all three pages
+- Header logo: `assets/images/logos/logo-full.svg`
+- Footer stamp: `assets/images/logos/stamp-white.svg`
+- Hero mascot: `assets/images/ui/hero-digital-mascot.png`
 
-## SEO Notes
+### Product Images
+
+- `assets/images/products/borahae-combo.png`
+- `assets/images/products/purple-rain-matcha.png`
+- `assets/images/products/bangkok-street-thai-bubble-tea.png`
+- `assets/images/products/gamja-corn-dog.png`
+- `assets/images/products/pink-velvet-burger.png`
+
+## Legal Pages
+
+### `privacy.html`
+
+- Page title: `Network Privacy & Data`
+- Includes a short branded `TL;DR` intro before the formal legal text
+- Uses the shared brand styling with readable long-form copy
+- Keeps legal contact set to `nivedhya11hospitality@gmail.com`
+
+### `terms.html`
+
+- Page title: `Terms of Access`
+- Includes a short branded `TL;DR` intro before the formal legal text
+- Emphasizes IP protection and network access rules
+- Uses the same shared site shell and footer links
+
+## SEO and Metadata
 
 `index.html` currently includes:
 
-- Optimized `<title>` and `<meta name="description">`
-- Keyword metadata for Dehradun local discovery
-- Open Graph metadata
+- `<title>`: `Boba Bear | S-Tier Sips & K-Street Drip`
+- Meta description aligned to the global lifestyle brand positioning
+- Open Graph metadata for social sharing
 - Twitter card metadata
-- JSON-LD schema for a delivery-only food business
+- JSON-LD schema describing the business and featured offer catalog
 
-### Current SEO Positioning
+## Ordering Links
 
-- Premium bubble tea delivery in Dehradun
-- Korean street food / K-street bites
-- Delivery-only cloud kitchen
-- Local discovery around boba, ramyun, corn dogs, and food delivery
+Current external actions wired into the site:
 
-## Menu UX Notes
-
-- The full menu currently uses the **older compact tabbed layout**
-- Only one menu category is shown at a time to avoid making the page too long
-- Hero badges and small menu pills are intentionally **non-clickable**
-
-## Legal Content Notes
-
-- Privacy and terms copy is already populated
-- Last updated date on legal pages: `April 11, 2026`
-- Contact email has been updated to `nivedhya11hospitality@gmail.com`
-
-## Social / Preview Assets
-
-- Hero social preview image path: `assets/images/ui/hero-digital-mascot.png`
-- Brand logo path: `assets/images/logos/logo-full.svg`
+- **Swiggy:** `https://www.swiggy.com/direct/brand/741763?source=swiggy-direct&subSource=instagram`
+- **Zomato:** `https://link.zomato.com/xqzv/rshare?id=12538351530563d18`
+- **WhatsApp:** `https://wa.me/919876543210?text=I%20want%20to%20Catch%20the%20Drop.%20Send%20the%20menu%21`
 
 ## Maintenance Notes
 
-- Keep branding consistent across all pages when updating copy
-- If the production domain is finalized later, convert relative SEO/social image paths to absolute URLs
-- If menu categories are changed, update both the tab labels and corresponding panel content in `index.html`
-- Keep footer links synchronized across `index.html`, `privacy.html`, and `terms.html`
+- Keep homepage, privacy page, and terms page terminology aligned with the current brand lexicon
+- Prefer `Bharat` over `India` in user-facing brand copy where intentional
+- Avoid reintroducing deprecated phrasing such as `cloud kitchen`, `delivery kitchen`, `launch site`, or `branch` in brand-forward copy
+- If featured products change, update both homepage cards and asset references together
+- If the production domain is finalized, convert social preview image paths to absolute URLs
+- Keep footer legal links synchronized across `index.html`, `privacy.html`, and `terms.html`
