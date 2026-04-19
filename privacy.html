@@ -1,37 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Boba Bear — Network Privacy & Data</title>
-  <meta name="description" content="Network Privacy & Data for Boba Bear, a global lifestyle brand operating through a direct-to-consumer network." />
-  <meta name="theme-color" content="#1A2210" />
+  <title>Boba Bear — Network Privacy &amp; Data</title>
+  <meta name="description" content="Network Privacy &amp; Data for Boba Bear, a global lifestyle brand operating through a direct-to-consumer network." />
+  <meta name="theme-color" content="#FAF3E2" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#1A2210" media="(prefers-color-scheme: dark)" />
+
+  <!-- Theme init: legal pages default to light, go dark only if user set it -->
+  <script>
+    (function () {
+      var s = localStorage.getItem('bb-theme');
+      var sys = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (s === 'dark' || (!s && sys)) { document.documentElement.classList.add('dark'); }
+    })();
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Luckiest+Guy&family=Nunito:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=JetBrains+Mono:wght@400&family=Luckiest+Guy&family=Nunito:wght@400;600;700;900&display=swap" rel="stylesheet" />
   <style>
+    /* ── Tier 2 semantic tokens ── */
     :root {
-      --bg: #1A2210;
+      --bg-page: #FAF3E2;
+      --bg-section: #FDF8EB;
+      --bg-surface: #FEFCF7;
+      --text-primary: #42281A;
+      --text-secondary: #5F3A24;
+      --text-tertiary: #8B5C38;
+      --text-label: #7B4A2D;
+      --green: #759E20;
+      --gold: #D88C1A;
+      --topbar-bg: rgba(250,243,226,0.88);
+      --topbar-border: rgba(117,158,32,0.20);
+      --card-bg: rgba(255,255,255,0.55);
+      --card-border: rgba(66,40,26,0.10);
+      --card-text: rgba(66,40,26,0.90);
+      --card-heading: #42281A;
+      --footer-bg: #FAF3E2;
+      --footer-border: rgba(117,158,32,0.12);
+      --footer-text: rgba(66,40,26,0.52);
+      --footer-text-strong: rgba(66,40,26,0.78);
+      --footer-address: rgba(66,40,26,0.42);
+      --footer-sep: rgba(66,40,26,0.25);
+      --footer-copyright: rgba(66,40,26,0.22);
+      --band-bg: #F4E8C8;
+      --band-text: #42281A;
+      --placeholder-bg: rgba(117,158,32,0.16);
+      --placeholder-text: #42281A;
+      --focus-ring: rgba(117,158,32,0.25);
+    }
+    html.dark {
+      --bg-page: #1A2210;
+      --bg-section: #22361A;
+      --bg-surface: #2E4720;
+      --text-primary: #FAF3E2;
+      --text-secondary: #EBD9A6;
+      --text-tertiary: #A8BF8F;
+      --text-label: #A8D832;
       --green: #A8D832;
       --gold: #F5A623;
-      --white: #F4F0E6;
-      --cream: #F4F0E6;
-      --ink: #243018;
+      --topbar-bg: rgba(26,34,16,0.88);
+      --topbar-border: rgba(168,216,50,0.15);
+      --card-bg: #2E4720;
+      --card-border: rgba(168,216,50,0.12);
+      --card-text: #EBD9A6;
+      --card-heading: #FAF3E2;
+      --footer-bg: #1A2210;
+      --footer-border: rgba(168,216,50,0.12);
+      --footer-text: rgba(250,243,226,0.52);
+      --footer-text-strong: rgba(250,243,226,0.78);
+      --footer-address: rgba(250,243,226,0.38);
+      --footer-sep: rgba(250,243,226,0.25);
+      --footer-copyright: rgba(250,243,226,0.20);
+      --band-bg: #22361A;
+      --band-text: #FAF3E2;
+      --placeholder-bg: rgba(168,216,50,0.16);
+      --placeholder-text: #A8BF8F;
+      --focus-ring: rgba(168,216,50,0.35);
     }
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; }
 
     body {
-      background-color: var(--bg);
-      color: var(--white);
+      background-color: var(--bg-page);
+      color: var(--text-primary);
       font-family: 'Nunito', sans-serif;
       font-size: 16px;
       line-height: 1.6;
       overflow-x: hidden;
     }
 
-    body::before {
+    html.dark body::before {
       content: '';
       position: fixed;
       inset: 0;
@@ -40,7 +102,22 @@
       z-index: 0;
     }
 
-    a { color: inherit; text-decoration: none; }
+    a { color:inherit; text-decoration:none; }
+
+    :focus-visible { outline:none; box-shadow:0 0 0 3px var(--focus-ring); }
+
+    .btn-transition {
+      transition: background-color 150ms cubic-bezier(0,0,0.2,1),
+                  border-color 150ms cubic-bezier(0,0,0.2,1),
+                  transform 150ms cubic-bezier(0,0,0.2,1);
+    }
+    .btn-transition:hover { transform: translateY(-1px); }
+
+    /* Theme toggle icons */
+    .icon-sun  { display:none; }
+    .icon-moon { display:block; }
+    html.dark .icon-sun  { display:block; }
+    html.dark .icon-moon { display:none; }
 
     .topbar {
       position: sticky;
@@ -49,29 +126,47 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 14px 20px;
-      background: rgba(26, 34, 16, 0.85);
+      padding: 0 20px;
+      height: 56px;
+      background: var(--topbar-bg);
       backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(168, 216, 50, 0.15);
+      border-bottom: 1px solid var(--topbar-border);
     }
 
-    .topbar-logo img {
-      width: auto;
-      height: 34px;
-      display: block;
+    .topbar-logo img { width:auto; height:32px; display:block; }
+
+    .topbar-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
     .topbar-tag {
-      font-size: 0.7rem;
+      font-size: 0.68rem;
       font-weight: 700;
       color: var(--gold);
-      background: rgba(245, 166, 35, 0.1);
-      border: 1px solid rgba(245, 166, 35, 0.35);
-      padding: 4px 10px;
+      background: rgba(245,166,35,0.10);
+      border: 1px solid rgba(245,166,35,0.35);
+      padding: 3px 10px;
       border-radius: 999px;
       text-transform: uppercase;
       letter-spacing: 0.08em;
     }
+
+    .theme-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      border: 1px solid var(--topbar-border);
+      background: transparent;
+      color: var(--text-tertiary);
+      cursor: pointer;
+      transition: background 150ms, border-color 150ms;
+    }
+    .theme-toggle:hover { background: rgba(168,216,50,0.08); }
 
     .page-hero {
       position: relative;
@@ -84,7 +179,7 @@
 
     .section-label {
       font-size: 0.72rem;
-      font-weight: 900;
+      font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.18em;
       color: var(--green);
@@ -93,12 +188,12 @@
 
     .page-title {
       font-family: 'Luckiest Guy', cursive;
-      font-size: clamp(2.6rem, 11vw, 4.2rem);
+      font-size: clamp(2.4rem, 10vw, 4rem);
       color: var(--gold);
       line-height: 0.95;
       letter-spacing: 0.04em;
       margin-bottom: 14px;
-      text-shadow: 0 4px 0 rgba(0,0,0,0.35), 0 0 32px rgba(245,166,35,0.18);
+      text-shadow: 0 4px 0 rgba(0,0,0,0.20), 0 0 32px rgba(245,166,35,0.18);
     }
 
     .page-subtitle {
@@ -111,10 +206,10 @@
     .legal-band {
       position: relative;
       z-index: 1;
-      background: var(--cream);
-      color: var(--ink);
-      border-top: 1px solid rgba(168,216,50,0.12);
-      border-bottom: 1px solid rgba(168,216,50,0.12);
+      background: var(--band-bg);
+      color: var(--band-text);
+      border-top: 1px solid var(--topbar-border);
+      border-bottom: 1px solid var(--topbar-border);
     }
 
     .legal-shell {
@@ -124,58 +219,45 @@
     }
 
     .legal-card {
-      background: rgba(255,255,255,0.42);
-      border: 1px solid rgba(36,48,24,0.08);
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
       border-radius: 24px;
       padding: 28px 22px;
-      box-shadow: 0 18px 40px rgba(26,34,16,0.08);
+      box-shadow: 0 8px 24px rgba(26,34,16,0.08);
     }
 
     .legal-card h2,
     .legal-card h3 {
       font-family: 'Bubblegum Sans', cursive;
       letter-spacing: 0.04em;
-      color: var(--bg);
+      color: var(--card-heading);
       margin-bottom: 12px;
     }
-
-    .legal-card h2 {
-      font-size: 1.8rem;
-      line-height: 1;
-    }
-
-    .legal-card h3 {
-      font-size: 1.1rem;
-      margin-top: 28px;
-    }
+    .legal-card h2 { font-size: 1.75rem; line-height: 1.1; }
+    .legal-card h3 { font-size: 1.1rem; margin-top: 28px; }
 
     .legal-card p,
     .legal-card li {
       font-size: 1rem;
       line-height: 1.8;
-      color: rgba(36,48,24,0.9);
+      color: var(--card-text);
     }
 
     .legal-card p + p,
     .legal-card ul,
-    .legal-card ol {
-      margin-top: 16px;
-    }
-
+    .legal-card ol { margin-top: 16px; }
     .legal-card ul,
-    .legal-card ol {
-      padding-left: 20px;
-    }
+    .legal-card ol { padding-left: 20px; }
 
     .placeholder-note {
       display: inline-block;
       margin-top: 14px;
-      padding: 7px 12px;
+      padding: 6px 12px;
       border-radius: 999px;
-      background: rgba(168,216,50,0.16);
-      color: var(--bg);
+      background: var(--placeholder-bg);
+      color: var(--placeholder-text);
       font-size: 0.72rem;
-      font-weight: 900;
+      font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.08em;
     }
@@ -183,8 +265,8 @@
     .footer {
       position: relative;
       z-index: 1;
-      background: var(--bg);
-      border-top: 1px solid rgba(168,216,50,0.12);
+      background: var(--footer-bg);
+      border-top: 1px solid var(--footer-border);
     }
 
     .footer-inner {
@@ -193,60 +275,60 @@
       padding: 36px 20px 30px;
     }
 
-    .footer-brand-block {
-      text-align: center;
-      margin-bottom: 22px;
-    }
+    .footer-brand-block { text-align:center; margin-bottom:22px; }
 
     .footer-logo {
-      font-family: 'Luckiest Guy', cursive;
+      font-family: 'Bubblegum Sans', cursive;
       font-size: 1.8rem;
       color: var(--green);
       letter-spacing: 0.06em;
       margin-bottom: 4px;
     }
-
-    .footer-logo span { color: var(--gold); }
+    .footer-logo span { color:var(--gold); }
 
     .footer-tagline {
       font-size: 0.78rem;
-      color: rgba(244,240,230,0.32);
+      color: var(--footer-text);
       font-weight: 600;
     }
 
     .footer-hr {
       border: none;
-      border-top: 1px solid rgba(168,216,50,0.1);
+      border-top: 1px solid var(--footer-border);
       margin: 0 0 22px;
     }
 
-    .footer-legal-block { text-align: center; }
-
-    .footer-stamp-wrap { margin-bottom: 16px; }
+    .footer-legal-block { text-align:center; }
+    .footer-stamp-wrap  { margin-bottom:16px; }
 
     .footer-stamp {
-      width: 88px;
-      height: auto;
+      width: 88px; height:auto;
       margin: 0 auto;
-      opacity: 0.9;
+      opacity: 0.85;
+      display: none;
     }
+    html.dark .footer-stamp { display:block; }
+
+    .footer-logo-light {
+      height: 36px; width:auto;
+      margin: 0 auto 4px;
+      display: block;
+      opacity: 0.75;
+    }
+    html.dark .footer-logo-light { display:none; }
 
     .footer-entity-text {
       font-size: 0.75rem;
-      color: rgba(244,240,230,0.52);
+      color: var(--footer-text);
       font-weight: 600;
       line-height: 1.65;
       margin-bottom: 5px;
     }
-
-    .footer-entity-text strong {
-      color: rgba(244,240,230,0.78);
-      font-weight: 900;
-    }
+    .footer-entity-text strong { color:var(--footer-text-strong); font-weight:900; }
 
     .footer-address-text {
       font-size: 0.72rem;
-      color: rgba(244,240,230,0.38);
+      color: var(--footer-address);
       font-weight: 600;
       margin-bottom: 18px;
     }
@@ -270,35 +352,45 @@
     }
 
     .footer-policy-sep {
-      width: 3px;
-      height: 3px;
+      width: 3px; height:3px;
       border-radius: 50%;
-      background: rgba(244,240,230,0.25);
+      background: var(--footer-sep);
       flex-shrink: 0;
     }
 
     .footer-copyright {
       font-size: 0.63rem;
-      color: rgba(244,240,230,0.2);
+      color: var(--footer-copyright);
       letter-spacing: 0.05em;
       line-height: 1.6;
     }
 
     @media (min-width: 600px) {
-      body { font-size: 17px; }
-      .legal-shell { padding: 48px 24px 64px; }
-      .legal-card { padding: 36px 34px; }
+      body { font-size:17px; }
+      .legal-shell { padding:48px 24px 64px; }
+      .legal-card  { padding:36px 34px; }
     }
   </style>
 </head>
 <body>
+
   <nav class="topbar">
     <div class="topbar-logo">
       <a href="index.html" aria-label="Boba Bear home">
         <img src="assets/images/logos/logo-full.svg" alt="Boba Bear Official Logo" />
       </a>
     </div>
-    <div class="topbar-tag">Now Open</div>
+    <div class="topbar-right">
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle colour theme">
+        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <div class="topbar-tag">Now Open</div>
+    </div>
   </nav>
 
   <header class="page-hero">
@@ -313,7 +405,7 @@
         <h2>Network Privacy &amp; Data</h2>
         <p><strong>Last Updated:</strong> April 11, 2026</p>
         <h3>THE TL;DR:</h3>
-        <p>We aren’t in the business of shady data harvesting. We only collect the exact data required to execute your drops, process your payments, and keep the Boba Bear network running smoothly. We don't sell your info to third-party ad brokers.</p>
+        <p>We aren't in the business of shady data harvesting. We only collect the exact data required to execute your drops, process your payments, and keep the Boba Bear network running smoothly. We don't sell your info to third-party ad brokers.</p>
         <p>Below is the legal architecture of how we handle your data within the Nivedhya11 Hospitality Private Limited network.</p>
 
         <h3>1. Introduction</h3>
@@ -359,12 +451,16 @@
                alt="NIVEDHYA11 HOSPITALITY PRIVATE LIMITED Official Brand Stamp"
                loading="lazy"
                class="footer-stamp" />
+          <img src="assets/images/logos/logo-full.svg"
+               alt="Boba Bear logo"
+               loading="lazy"
+               class="footer-logo-light" />
         </div>
         <p class="footer-entity-text">
           Boba Bear is a brand owned and operated by<br />
           <strong>NIVEDHYA11 HOSPITALITY PRIVATE LIMITED.</strong>
         </p>
-        <p class="footer-address-text">📍 Origin: India | Direct-to-Consumer Network</p>
+        <p class="footer-address-text">Origin: Bharat &nbsp;&middot;&nbsp; Direct-to-Consumer Network</p>
         <p class="footer-address-text">Boba Bear is a global lifestyle brand operating through digital drops only.</p>
 
         <div class="footer-policy-links">
@@ -376,10 +472,17 @@
         </div>
 
         <p class="footer-copyright">
-          &copy; 2025copy; 2026 NIVEDHYA11 HOSPITALITY PRIVATE LIMITED.<br />All rights reserved.
+          &copy; 2026 NIVEDHYA11 HOSPITALITY PRIVATE LIMITED.<br />All rights reserved.
         </p>
       </div>
     </div>
   </footer>
+
+  <script>
+    document.getElementById('theme-toggle').addEventListener('click', function () {
+      var isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('bb-theme', isDark ? 'dark' : 'light');
+    });
+  </script>
 </body>
 </html>

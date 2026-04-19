@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="dark scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,8 +8,8 @@
   <meta name="keywords" content="boba tea Dehradun, bubble tea near me, Korean corn dog, spicy ramyun Dehradun, digital drops, direct to consumer food brand, food delivery Dehradun, Nivedhya11 Hospitality" />
   <meta name="author" content="Boba Bear — Nivedhya11 Hospitality Private Limited" />
   <meta name="robots" content="index,follow" />
-  <meta name="theme-color" content="#1A2210" />
-
+  <meta name="theme-color" content="#1A2210" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#FAF3E2" media="(prefers-color-scheme: light)" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Boba Bear | S-Tier Sips &amp; K-Street Drip" />
   <meta property="og:description" content="For the unbothered. High-end boba and K-street food. A global lifestyle brand. Chapter 01: Bharat." />
@@ -17,252 +17,284 @@
   <meta property="og:image:alt" content="Boba Bear mascot for premium bubble tea and K-street food delivery" />
   <meta property="og:site_name" content="Boba Bear" />
   <meta property="og:locale" content="en_IN" />
-
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Boba Bear | S-Tier Sips &amp; K-Street Drip" />
   <meta name="twitter:description" content="For the unbothered. High-end boba and K-street food. A global lifestyle brand. Chapter 01: Bharat." />
   <meta name="twitter:image" content="assets/images/ui/hero-digital-mascot.png" />
 
+  <!-- Theme init: runs before Tailwind to prevent FOUC -->
+  <script>
+    (function () {
+      var s = localStorage.getItem('bb-theme');
+      var sys = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (s === 'light' || (!s && !sys)) { document.documentElement.classList.remove('dark'); }
+      else { document.documentElement.classList.add('dark'); }
+    })();
+  </script>
+
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
+      darkMode: 'class',
       theme: {
         extend: {
           colors: {
-            night: {
-              DEFAULT: '#1A2210',
-              50: '#EEF2EA', 100: '#D4DFC5', 200: '#A8BF8F', 300: '#7C9F5F',
-              400: '#558036', 500: '#3D6026', 600: '#2E4720', 700: '#22361A',
-              800: '#1A2210', 950: '#0D1208'
-            },
-            firefly: {
-              DEFAULT: '#A8D832',
-              50: '#F5FAE6', 100: '#E8F3C4', 200: '#D3E889', 300: '#BDDE5A',
-              400: '#A8D832', 500: '#8FBD28', 600: '#759E20', 700: '#5A7C18',
-              800: '#405810', 950: '#1F2C08'
-            },
-            saffron: {
-              DEFAULT: '#F5A623',
-              50: '#FEF7EC', 100: '#FDE9C5', 200: '#FAD28A', 300: '#F8BC58',
-              400: '#F5A623', 500: '#D88C1A', 600: '#B37010', 700: '#8A5510',
-              800: '#5E3A0C', 950: '#2F1D06'
-            },
-            brown: {
-              DEFAULT: '#7B4A2D',
-              50: '#FAF3EC', 100: '#F0DCC4', 200: '#DBBA92', 300: '#C39866',
-              400: '#A7764A', 500: '#8B5C38', 600: '#7B4A2D', 700: '#5F3A24',
-              800: '#42281A', 950: '#1F120C'
-            },
-            cream: {
-              DEFAULT: '#FAF3E2',
-              50: '#FEFCF7', 100: '#FDF8EB', 200: '#FAF3E2', 300: '#F4E8C8',
-              400: '#EBD9A6', 500: '#D9C286', 600: '#B9A365', 700: '#948048',
-              800: '#6B5C34', 950: '#342D1A'
-            },
-            aurora: {
-              rose: '#F9C4CC',
-              peach: '#FAC9A8',
-              butter: '#FAF0A0',
-              mint: '#B8F0C4',
-              sky: '#A8D8F5',
-              lavender: '#D4BEF5'
-            }
+            night:   { DEFAULT:'#1A2210', 50:'#EEF2EA', 100:'#D4DFC5', 200:'#A8BF8F', 300:'#7C9F5F', 400:'#558036', 500:'#3D6026', 600:'#2E4720', 700:'#22361A', 800:'#1A2210', 950:'#0D1208' },
+            firefly: { DEFAULT:'#A8D832', 50:'#F5FAE6', 100:'#E8F3C4', 200:'#D3E889', 300:'#BDDE5A', 400:'#A8D832', 500:'#8FBD28', 600:'#759E20', 700:'#5A7C18', 800:'#405810', 950:'#1F2C08' },
+            saffron: { DEFAULT:'#F5A623', 50:'#FEF7EC', 100:'#FDE9C5', 200:'#FAD28A', 300:'#F8BC58', 400:'#F5A623', 500:'#D88C1A', 600:'#B37010', 700:'#8A5510', 800:'#5E3A0C', 950:'#2F1D06' },
+            brown:   { DEFAULT:'#7B4A2D', 50:'#FAF3EC', 100:'#F0DCC4', 200:'#DBBA92', 300:'#C39866', 400:'#A7764A', 500:'#8B5C38', 600:'#7B4A2D', 700:'#5F3A24', 800:'#42281A', 950:'#1F120C' },
+            cream:   { DEFAULT:'#FAF3E2', 50:'#FEFCF7', 100:'#FDF8EB', 200:'#FAF3E2', 300:'#F4E8C8', 400:'#EBD9A6', 500:'#D9C286', 600:'#B9A365', 700:'#948048', 800:'#6B5C34', 950:'#342D1A' },
+            aurora:  { rose:'#F9C4CC', peach:'#FAC9A8', butter:'#FAF0A0', mint:'#B8F0C4', sky:'#A8D8F5', lavender:'#D4BEF5' },
+            neutral: { 50:'#FAFAFA', 100:'#F4F4F4', 200:'#E4E4E4', 300:'#C8C8C8', 400:'#A0A0A0', 500:'#787878', 600:'#5A5A5A', 700:'#3C3C3C', 800:'#242424', 950:'#0F0F0F' }
           },
           fontFamily: {
             display: ['Luckiest Guy', 'cursive'],
             heading: ['Bubblegum Sans', 'cursive'],
-            body: ['Nunito', 'sans-serif']
+            body:    ['Nunito', 'sans-serif'],
+            mono:    ['JetBrains Mono', 'monospace']
           },
           boxShadow: {
-            'glow-firefly': '0 4px 20px rgba(168, 216, 50, 0.40)',
-            'glow-saffron': '0 4px 20px rgba(245, 166, 35, 0.35)',
-            'card-hover': '0 4px 12px rgba(26, 34, 16, 0.14)',
-            'modal': '0 16px 40px rgba(26, 34, 16, 0.24)',
-            'section': '0 8px 24px rgba(26, 34, 16, 0.18)'
+            'xs':  '0 1px 2px rgba(26,34,16,0.08)',
+            'sm':  '0 2px 6px rgba(26,34,16,0.10)',
+            'md':  '0 4px 12px rgba(26,34,16,0.14)',
+            'lg':  '0 8px 24px rgba(26,34,16,0.18)',
+            'xl':  '0 16px 40px rgba(26,34,16,0.24)',
+            'glow-firefly': '0 4px 20px rgba(168,216,50,0.40)',
+            'glow-saffron': '0 4px 20px rgba(245,166,35,0.35)',
+            'card-hover':   '0 4px 12px rgba(26,34,16,0.14)',
+            'modal':        '0 16px 40px rgba(26,34,16,0.24)',
+            'section':      '0 8px 24px rgba(26,34,16,0.18)'
           },
-          keyframes: {
-            marquee: {
-              '0%': { transform: 'translateX(0)' },
-              '100%': { transform: 'translateX(-50%)' }
-            }
-          },
-          animation: {
-            marquee: 'marquee 28s linear infinite'
-          }
+          keyframes: { marquee: { '0%':{ transform:'translateX(0)' }, '100%':{ transform:'translateX(-50%)' } } },
+          animation: { marquee: 'marquee 28s linear infinite' }
         }
       },
-      safelist: [
-        // Classes used only in JS-rendered product cards and platform buttons.
-        // Required so Tailwind CDN generates these even before DOMContentLoaded.
-        'border-night-600', 'bg-night-600',
-        'shadow-section', 'hover:shadow-card-hover', 'hover:border-firefly/30',
-        'tracking-[0.16em]', 'leading-5',
-        'text-white', 'hover:brightness-110',
-        'tracking-[0.08em]', 'sm:text-[11px]', 'sm:px-3',
-      ]
+      safelist: ['hover:brightness-110','sm:px-3','sm:text-[11px]']
     };
   </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Luckiest+Guy&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=JetBrains+Mono:wght@400&family=Luckiest+Guy&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+
   <style>
-    :focus-visible {
-      outline: none;
-      box-shadow: 0 0 0 3px rgba(168, 216, 50, 0.35);
+    /* Tier 2 semantic token CSS variables */
+    :root {
+      --bg-page:#FAF3E2; --bg-section:#FDF8EB; --bg-surface:#FEFCF7; --bg-surface-raised:#FFFFFF; --bg-surface-sunken:#F4E8C8;
+      --text-primary:#42281A; --text-secondary:#5F3A24; --text-tertiary:#8B5C38; --text-label:#7B4A2D; --text-on-primary:#1A2210;
+      --border-default:#EBD9A6; --border-strong:#C39866; --border-subtle:#F4E8C8;
+      --interactive-primary:#8FBD28; --interactive-primary-hover:#759E20;
+      --interactive-secondary:#D88C1A; --interactive-secondary-hover:#B37010;
+      --focus-ring:rgba(117,158,32,0.25);
     }
+    html.dark {
+      --bg-page:#1A2210; --bg-section:#22361A; --bg-surface:#2E4720; --bg-surface-raised:#3D6026; --bg-surface-sunken:#0D1208;
+      --text-primary:#FAF3E2; --text-secondary:#EBD9A6; --text-tertiary:#A8BF8F; --text-label:#A8D832; --text-on-primary:#1A2210;
+      --border-default:#2E4720; --border-strong:#558036; --border-subtle:#22361A;
+      --interactive-primary:#A8D832; --interactive-primary-hover:#BDDE5A;
+      --interactive-secondary:#F5A623; --interactive-secondary-hover:#F8BC58;
+      --focus-ring:rgba(168,216,50,0.35);
+    }
+    body { background-color:var(--bg-page); color:var(--text-primary); }
+    :focus-visible { outline:none; box-shadow:0 0 0 3px var(--focus-ring); }
     .card-lift {
-      transition: transform 250ms cubic-bezier(0, 0, 0.2, 1),
-                  box-shadow 250ms cubic-bezier(0, 0, 0.2, 1),
-                  border-color 250ms cubic-bezier(0, 0, 0.2, 1);
+      transition: transform 250ms cubic-bezier(0,0,0.2,1),
+                  box-shadow 250ms cubic-bezier(0,0,0.2,1),
+                  border-color 250ms cubic-bezier(0,0,0.2,1);
     }
-    .card-lift:hover { transform: translateY(-2px); }
+    .card-lift:hover { transform:translateY(-2px); }
     .btn-transition {
-      transition: background-color 150ms cubic-bezier(0, 0, 0.2, 1),
-                  box-shadow 150ms cubic-bezier(0, 0, 0.2, 1),
-                  transform 150ms cubic-bezier(0, 0, 0.2, 1);
+      transition: background-color 150ms cubic-bezier(0,0,0.2,1),
+                  box-shadow 150ms cubic-bezier(0,0,0.2,1),
+                  transform 150ms cubic-bezier(0,0,0.2,1),
+                  border-color 150ms cubic-bezier(0,0,0.2,1);
     }
-    .btn-transition:hover { transform: translateY(-1px); }
+    .btn-transition:hover { transform:translateY(-1px); }
+
+    /* Theme toggle: sun shown in dark mode (click=go light), moon in light (click=go dark) */
+    .icon-sun  { display:block; }
+    .icon-moon { display:none; }
+    html:not(.dark) .icon-sun  { display:none; }
+    html:not(.dark) .icon-moon { display:block; }
+
+    /* JS-rendered showcase cards — theme-aware via CSS vars */
+    .bb-card {
+      display:block; overflow:hidden; border-radius:12px;
+      border:1px solid var(--border-default); background-color:var(--bg-surface);
+      padding:16px; text-decoration:none;
+      transition: transform 250ms cubic-bezier(0,0,0.2,1),
+                  box-shadow 250ms cubic-bezier(0,0,0.2,1),
+                  border-color 250ms cubic-bezier(0,0,0.2,1);
+    }
+    .bb-card:hover { transform:translateY(-2px); border-color:rgba(168,216,50,0.30); box-shadow:0 4px 12px rgba(26,34,16,0.14); }
+    .bb-card-image { overflow:hidden; border-radius:8px; }
+    .bb-card-image img { height:208px; width:100%; object-fit:cover; }
+    .bb-card-placeholder { height:208px; border-radius:8px; }
+    .bb-card-category { font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.16em; color:var(--text-label); }
+    .bb-card-title { margin-top:8px; font-family:'Bubblegum Sans',cursive; font-size:clamp(1.2rem,2vw,1.5rem); line-height:1.2; color:var(--text-primary); }
+    .bb-card-desc  { margin-top:8px; font-size:14px; font-weight:600; line-height:1.5; color:var(--text-secondary); }
+
+    /* Platform button text — cream-200 per spec (not pure white) */
+    .bb-on-brand { color:#FAF3E2; }
+
+    /* Footer stamp swap per mode */
+    .stamp-dark  { display:block; }
+    .stamp-light { display:none; }
+    html:not(.dark) .stamp-dark  { display:none; }
+    html:not(.dark) .stamp-light { display:block; }
   </style>
+
   <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": ["FoodEstablishment", "DeliveryRestaurant"],
-      "additionalType": "https://schema.org/GhostKitchen",
-      "name": "Boba Bear",
-      "description": "Boba Bear is a global lifestyle brand. Chapter 01 operates in Bharat through a direct-to-consumer network built around digital drops.",
-      "image": "assets/images/logos/logo-full.svg",
-      "brand": { "@type": "Brand", "name": "Boba Bear" },
-      "parentOrganization": { "@type": "Organization", "name": "Nivedhya11 Hospitality Private Limited" },
-      "servesCuisine": ["Korean", "Bubble Tea", "Street Food"],
-      "priceRange": "₹₹",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Dehradun",
-        "addressRegion": "Uttarakhand",
-        "addressCountry": "Bharat"
-      },
-      "areaServed": { "@type": "City", "name": "Dehradun" },
-      "acceptsReservations": false,
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Boba Bear Current Drop",
-        "itemListElement": [
-          { "@type": "OfferCatalog", "name": "Purple Rain Taro Boba" },
-          { "@type": "OfferCatalog", "name": "Gangnam Iced Coffee Boba" },
-          { "@type": "OfferCatalog", "name": "Zen Master Matcha Boba" },
-          { "@type": "OfferCatalog", "name": "Spicy Carbonara Ramyun" }
+      "@context":"https://schema.org",
+      "@type":["FoodEstablishment","DeliveryRestaurant"],
+      "additionalType":"https://schema.org/GhostKitchen",
+      "name":"Boba Bear",
+      "description":"Boba Bear is a global lifestyle brand. Chapter 01 operates in Bharat through a direct-to-consumer network built around digital drops.",
+      "image":"assets/images/logos/logo-full.svg",
+      "brand":{"@type":"Brand","name":"Boba Bear"},
+      "parentOrganization":{"@type":"Organization","name":"Nivedhya11 Hospitality Private Limited"},
+      "servesCuisine":["Korean","Bubble Tea","Street Food"],
+      "priceRange":"₹₹",
+      "address":{"@type":"PostalAddress","addressLocality":"Dehradun","addressRegion":"Uttarakhand","addressCountry":"Bharat"},
+      "areaServed":{"@type":"City","name":"Dehradun"},
+      "acceptsReservations":false,
+      "hasOfferCatalog":{
+        "@type":"OfferCatalog","name":"Boba Bear Current Drop",
+        "itemListElement":[
+          {"@type":"OfferCatalog","name":"Purple Rain Taro Boba"},
+          {"@type":"OfferCatalog","name":"Gangnam Iced Coffee Boba"},
+          {"@type":"OfferCatalog","name":"Zen Master Matcha Boba"},
+          {"@type":"OfferCatalog","name":"Spicy Carbonara Ramyun"}
         ]
       }
     }
   </script>
 </head>
-<body class="bg-night-800 font-body text-cream-200 antialiased">
+<body class="font-body antialiased">
 
   <div class="fixed inset-0 -z-10 opacity-[0.04]" aria-hidden="true" style="background-image:url(&quot;data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E&quot;);"></div>
 
-  <header class="sticky top-0 z-40 border-b border-night-700/60 bg-night-800/90 backdrop-blur-xl">
-    <div class="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-6 sm:px-8">
+  <header class="sticky top-0 z-40 border-b backdrop-blur-xl dark:border-night-700/60 border-cream-300/60 dark:bg-night-800/90 bg-cream-100/90">
+    <div class="mx-auto flex h-14 max-w-[1280px] items-center justify-between gap-4 px-6 sm:h-16 sm:px-8 lg:px-12">
+
       <a href="#top" class="shrink-0" aria-label="Boba Bear home">
         <img src="assets/images/logos/logo-full.svg" alt="Boba Bear logo" class="h-9 w-auto sm:h-10" />
       </a>
+
       <nav class="hidden items-center gap-2 md:flex" aria-label="Primary navigation">
-        <a href="#current-drop" class="whitespace-nowrap rounded-full border border-firefly/25 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.12em] text-firefly-300 transition-colors duration-150 hover:bg-night-600 hover:border-firefly/40">Current Drop</a>
-        <a href="#delivery-links" class="whitespace-nowrap rounded-full bg-firefly px-4 py-2 text-[11px] font-bold uppercase tracking-[0.12em] text-night transition-colors duration-150 hover:bg-firefly-300">Global Network</a>
+        <a href="#current-drop" class="btn-transition whitespace-nowrap rounded-[8px] border dark:border-firefly/25 border-firefly-700/30 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.12em] dark:text-firefly-300 text-firefly-700 dark:hover:bg-night-600 hover:bg-cream-300">Current Drop</a>
+        <a href="#delivery-links" class="btn-transition whitespace-nowrap rounded-[8px] border dark:border-firefly/25 border-firefly-700/30 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.12em] dark:text-firefly-300 text-firefly-700 dark:hover:bg-night-600 hover:bg-cream-300">Access the Drop</a>
       </nav>
-      <a href="#delivery-links" class="rounded-full border border-saffron/35 bg-saffron/10 px-3 py-2 text-[11px] font-bold uppercase tracking-[0.12em] text-saffron transition-colors duration-150 hover:bg-saffron/20 md:hidden">Global Network</a>
+
+      <div class="flex items-center gap-2">
+        <button id="theme-toggle" aria-label="Toggle colour theme" class="btn-transition flex h-9 w-9 items-center justify-center rounded-[8px] border dark:border-night-600 border-cream-400 dark:text-firefly-300 text-brown-600 dark:hover:bg-night-600 hover:bg-cream-300">
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+        <a href="#delivery-links" class="btn-transition rounded-[8px] border dark:border-saffron/35 border-saffron-500/35 dark:bg-saffron/10 bg-saffron/10 px-3 py-2 text-[11px] font-bold uppercase tracking-[0.12em] dark:text-saffron text-saffron-600 dark:hover:bg-saffron/20 hover:bg-saffron/20 md:hidden">Access Drop</a>
+      </div>
     </div>
   </header>
 
   <main id="top" class="overflow-x-hidden">
 
-    <section class="mx-auto grid max-w-6xl gap-8 px-6 pb-12 pt-10 sm:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-14 lg:pt-16">
+    <!-- Hero -->
+    <section class="mx-auto grid max-w-[1280px] gap-8 px-6 pb-12 pt-10 sm:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-14 lg:px-12 lg:pb-24 lg:pt-24">
       <div class="text-center lg:text-left">
         <h1 class="font-display text-5xl leading-[0.92] tracking-[0.03em] text-saffron drop-shadow-[0_4px_0_rgba(0,0,0,0.35)] sm:text-6xl lg:text-7xl">FOR THE<br />UNBOTHERED.</h1>
-        <p class="mt-4 text-base font-extrabold tracking-[0.05em] text-firefly sm:mt-5 sm:text-xl">S-Tier Sips. K-Street Drip.</p>
-        <p class="mt-3 max-w-xl text-sm font-semibold leading-6 text-cream-400 lg:text-base">A global lifestyle brand. Chapter 01: Bharat.</p>
-        <p class="mt-2 text-[11px] font-bold uppercase tracking-[0.18em] text-firefly/70">Coordinates: Dehradun</p>
+        <p class="mt-4 text-base font-extrabold tracking-[0.05em] dark:text-firefly text-firefly-700 sm:mt-5 sm:text-xl">S-Tier Sips. K-Street Drip.</p>
+        <p class="mt-3 max-w-xl text-sm font-semibold leading-6 dark:text-cream-400 text-brown-500 lg:text-base">A global lifestyle brand. Chapter 01: Bharat.</p>
+        <p class="mt-2 text-[11px] font-bold uppercase tracking-[0.18em] dark:text-firefly/70 text-firefly-700/70">Coordinates: Dehradun</p>
 
         <div class="mt-6 flex flex-wrap justify-center gap-2 sm:gap-3 lg:justify-start">
-          <span class="cursor-default rounded-full border border-firefly/40 px-3 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-firefly sm:px-4 sm:text-[11px]">Fresh Daily</span>
-          <span class="cursor-default rounded-full border border-firefly/40 px-3 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-firefly sm:px-4 sm:text-[11px]">No Shortcuts</span>
-          <span class="cursor-default rounded-full border border-firefly/40 px-3 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-firefly sm:px-4 sm:text-[11px]">K-Street OG</span>
-          <span class="cursor-default rounded-full border border-firefly/40 px-3 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-firefly sm:px-4 sm:text-[11px]">Catch the Drop</span>
+          <span class="cursor-default rounded-full border dark:border-firefly/40 border-firefly-700/40 px-3 py-2 text-[10px] font-bold uppercase tracking-[0.14em] dark:text-firefly text-firefly-700 sm:px-4 sm:text-[11px]">Fresh Daily</span>
+          <span class="cursor-default rounded-full border dark:border-firefly/40 border-firefly-700/40 px-3 py-2 text-[10px] font-bold uppercase tracking-[0.14em] dark:text-firefly text-firefly-700 sm:px-4 sm:text-[11px]">No Shortcuts</span>
+          <span class="cursor-default rounded-full border dark:border-firefly/40 border-firefly-700/40 px-3 py-2 text-[10px] font-bold uppercase tracking-[0.14em] dark:text-firefly text-firefly-700 sm:px-4 sm:text-[11px]">K-Street OG</span>
+          <span class="cursor-default rounded-full border dark:border-firefly/40 border-firefly-700/40 px-3 py-2 text-[10px] font-bold uppercase tracking-[0.14em] dark:text-firefly text-firefly-700 sm:px-4 sm:text-[11px]">Catch the Drop</span>
         </div>
 
         <div class="mt-8 flex flex-wrap justify-center gap-3 lg:justify-start">
-          <a href="#current-drop" class="btn-transition inline-block w-full rounded-[8px] bg-firefly px-8 py-3 text-center text-sm font-bold uppercase tracking-[0.12em] text-night shadow-lg shadow-firefly/20 hover:bg-firefly-300 hover:shadow-glow-firefly sm:w-auto">View Current Drop</a>
+          <a href="#current-drop" class="btn-transition inline-block w-full rounded-[8px] dark:bg-firefly bg-firefly-500 px-8 py-3 text-center text-sm font-bold uppercase tracking-[0.12em] text-night shadow-lg dark:shadow-firefly/20 shadow-firefly-500/20 dark:hover:bg-firefly-300 hover:bg-firefly-600 dark:hover:shadow-glow-firefly hover:shadow-glow-firefly sm:w-auto">View Current Drop</a>
         </div>
       </div>
 
       <div class="flex justify-center lg:justify-end">
-        <div class="relative inline-block w-full max-w-[300px] rounded-[24px] bg-night-950 p-[6px] shadow-[0_0_0_2px_#A8D832,0_18px_60px_rgba(0,0,0,0.30)] sm:max-w-[352px]">
-          <div class="rounded-[20px] border border-firefly/20 bg-night-800/80 p-3 sm:p-4">
+        <div class="relative inline-block w-full max-w-[300px] rounded-[24px] dark:bg-night-950 bg-cream-300 p-[6px] shadow-[0_0_0_2px_#A8D832,0_18px_60px_rgba(0,0,0,0.30)] sm:max-w-[352px]">
+          <div class="rounded-[20px] border dark:border-firefly/20 border-firefly-500/20 dark:bg-night-800/80 bg-cream-100/80 p-3 sm:p-4">
             <img src="assets/images/ui/hero-digital-mascot.png" alt="Boba Bear mascot" class="h-auto w-full rounded-[16px] object-cover" width="600" height="600" fetchpriority="high" decoding="async" />
           </div>
         </div>
       </div>
     </section>
 
-    <section class="border-y border-firefly/15 bg-night-700/40 py-3" aria-hidden="true">
+    <!-- Marquee ticker -->
+    <section class="border-y dark:border-firefly/15 border-firefly-600/15 dark:bg-night-700/40 bg-cream-300/40 py-3" aria-hidden="true">
       <div class="overflow-hidden">
         <div class="flex w-max animate-marquee">
           <div class="flex shrink-0 items-center">
             <span class="px-6 font-heading text-sm tracking-[0.12em] text-saffron">FOR THE UNBOTHERED.</span>
-            <span class="mx-2 h-1 w-1 shrink-0 rounded-full bg-firefly"></span>
+            <span class="mx-2 h-1 w-1 shrink-0 rounded-full dark:bg-firefly bg-firefly-600"></span>
             <span class="px-6 font-heading text-sm tracking-[0.12em] text-saffron">S-TIER SIPS. K-STREET DRIP.</span>
-            <span class="mx-2 h-1 w-1 shrink-0 rounded-full bg-firefly"></span>
+            <span class="mx-2 h-1 w-1 shrink-0 rounded-full dark:bg-firefly bg-firefly-600"></span>
             <span class="px-6 font-heading text-sm tracking-[0.12em] text-saffron">CATCH THE DROP.</span>
-            <span class="mx-2 h-1 w-1 shrink-0 rounded-full bg-firefly"></span>
+            <span class="mx-2 h-1 w-1 shrink-0 rounded-full dark:bg-firefly bg-firefly-600"></span>
             <span class="px-6 font-heading text-sm tracking-[0.12em] text-saffron">CHAPTER 01.</span>
-            <span class="mx-2 h-1 w-1 shrink-0 rounded-full bg-firefly"></span>
+            <span class="mx-2 h-1 w-1 shrink-0 rounded-full dark:bg-firefly bg-firefly-600"></span>
           </div>
-          <div class="flex shrink-0 items-center">
+          <div class="flex shrink-0 items-center" aria-hidden="true">
             <span class="px-6 font-heading text-sm tracking-[0.12em] text-saffron">FOR THE UNBOTHERED.</span>
-            <span class="mx-2 h-1 w-1 shrink-0 rounded-full bg-firefly"></span>
+            <span class="mx-2 h-1 w-1 shrink-0 rounded-full dark:bg-firefly bg-firefly-600"></span>
             <span class="px-6 font-heading text-sm tracking-[0.12em] text-saffron">S-TIER SIPS. K-STREET DRIP.</span>
-            <span class="mx-2 h-1 w-1 shrink-0 rounded-full bg-firefly"></span>
+            <span class="mx-2 h-1 w-1 shrink-0 rounded-full dark:bg-firefly bg-firefly-600"></span>
             <span class="px-6 font-heading text-sm tracking-[0.12em] text-saffron">CATCH THE DROP.</span>
-            <span class="mx-2 h-1 w-1 shrink-0 rounded-full bg-firefly"></span>
+            <span class="mx-2 h-1 w-1 shrink-0 rounded-full dark:bg-firefly bg-firefly-600"></span>
             <span class="px-6 font-heading text-sm tracking-[0.12em] text-saffron">CHAPTER 01.</span>
-            <span class="mx-2 h-1 w-1 shrink-0 rounded-full bg-firefly"></span>
+            <span class="mx-2 h-1 w-1 shrink-0 rounded-full dark:bg-firefly bg-firefly-600"></span>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="current-drop" class="mx-auto max-w-6xl px-6 py-12 sm:px-8 lg:py-16">
+    <!-- Current Drop / Showcase -->
+    <section id="current-drop" class="mx-auto max-w-[1280px] px-6 py-12 sm:px-8 md:py-16 lg:px-12 lg:py-24">
       <div class="mb-10 text-center">
-        <p class="text-[11px] font-bold uppercase tracking-[0.18em] text-firefly">Drop 01 — Current</p>
+        <p class="text-[11px] font-bold uppercase tracking-[0.18em] dark:text-firefly text-firefly-700">Drop 01 — Current</p>
         <h2 class="mt-3 font-heading text-4xl leading-tight text-saffron sm:text-5xl">The Current Drop</h2>
-        <p class="mt-3 text-sm font-semibold leading-6 text-cream-400">Four artefacts. Enough signal to set the tone.</p>
+        <p class="mt-3 text-sm font-semibold leading-6 dark:text-cream-400 text-brown-500">Four artefacts. Enough signal to set the tone.</p>
       </div>
 
-      <!-- Product cards injected by assets/js/content.js from SHOWCASE config -->
       <div id="showcase-grid" class="grid gap-4 sm:grid-cols-2"></div>
 
       <div class="mt-10 flex justify-center">
-        <a href="#delivery-links" class="btn-transition inline-flex w-full justify-center rounded-[8px] bg-saffron px-10 py-4 text-center text-sm font-bold uppercase tracking-[0.12em] text-night shadow-lg shadow-saffron/25 hover:bg-saffron-300 hover:shadow-glow-saffron sm:w-auto">
-          Explore the Menu Drop
+        <a href="#delivery-links" class="btn-transition inline-flex w-full justify-center rounded-[8px] dark:bg-saffron bg-saffron-500 px-10 py-4 text-center text-sm font-bold uppercase tracking-[0.12em] text-night shadow-lg dark:shadow-saffron/25 shadow-saffron-500/25 dark:hover:bg-saffron-300 hover:bg-saffron-600 dark:hover:shadow-glow-saffron hover:shadow-glow-saffron sm:w-auto">
+          Access the Drop
         </a>
       </div>
     </section>
 
-    <section id="delivery-links" class="mx-auto max-w-6xl px-6 pb-16 pt-2 sm:px-8">
-      <div class="rounded-[24px] border border-firefly/15 bg-night-700 p-6 shadow-modal sm:p-8 lg:p-10">
+    <!-- Delivery / platform links -->
+    <section id="delivery-links" class="mx-auto max-w-[1280px] px-6 pb-12 pt-2 sm:px-8 md:pb-16 lg:px-12 lg:pb-24">
+      <div class="rounded-[24px] border dark:border-firefly/15 border-cream-400/60 dark:bg-night-700 bg-cream-50 p-6 sm:p-8 lg:p-10">
         <div class="max-w-2xl">
-          <p class="text-[11px] font-bold uppercase tracking-[0.20em] text-firefly">Digital Drop Access</p>
+          <p class="text-[11px] font-bold uppercase tracking-[0.20em] dark:text-firefly text-firefly-700">Digital Drop Access</p>
           <h2 class="mt-3 font-heading text-4xl leading-tight text-saffron sm:text-5xl">Catch the Drop.</h2>
-          <p class="mt-4 text-base font-semibold leading-7 text-cream-400">The Boba Bear network currently fulfills drops via Swiggy, Zomato, and WhatsApp. Quietly efficient. No unnecessary friction.</p>
+          <p class="mt-4 text-base font-semibold leading-7 dark:text-cream-400 text-brown-500">The Boba Bear network currently fulfills drops via Swiggy, Zomato, and WhatsApp. Quietly efficient. No unnecessary friction.</p>
         </div>
-        <!-- Platform buttons injected by assets/js/content.js from PLATFORMS config -->
         <div id="platform-buttons" class="mt-8 grid gap-3 sm:grid-cols-3"></div>
       </div>
     </section>
 
-    <section class="mx-auto max-w-6xl px-6 pb-16 sm:px-8">
+    <!-- Brand World + Secret Layer -->
+    <section class="mx-auto max-w-[1280px] px-6 pb-12 sm:px-8 md:pb-16 lg:px-12 lg:pb-24">
       <div class="grid gap-4 lg:grid-cols-[1.15fr_0.85fr]">
 
-        <div class="rounded-[24px] border border-cream-300/40 bg-cream-200 p-6 text-night-800 shadow-section sm:p-8">
+        <!-- Brand World: intentionally fixed light surface — mixed-mode per design spec -->
+        <div class="rounded-[24px] border border-cream-300/40 bg-cream-200 p-6 sm:p-8">
           <p class="text-[11px] font-bold uppercase tracking-[0.20em] text-brown-600">Brand World</p>
           <h2 class="mt-3 font-heading text-4xl leading-tight text-night-800 sm:text-5xl">Quiet Signal.<br />Strong Memory.</h2>
           <p class="mt-4 max-w-2xl text-sm font-semibold leading-7 text-brown-700">Boba Bear is built like a lookbook with routing attached. Layered cups, sharp packaging, and a menu preview that behaves more like an edit than a dump.</p>
@@ -282,11 +314,12 @@
           </div>
         </div>
 
-        <div class="rounded-[24px] border border-firefly/15 bg-night-700 p-6 shadow-modal sm:p-8">
-          <p class="text-[11px] font-bold uppercase tracking-[0.20em] text-firefly">Secret Layer</p>
+        <!-- Secret Layer -->
+        <div class="rounded-[24px] border dark:border-firefly/15 border-cream-400/60 dark:bg-night-700 bg-cream-100 p-6 sm:p-8">
+          <p class="text-[11px] font-bold uppercase tracking-[0.20em] dark:text-firefly text-firefly-700">Secret Layer</p>
           <h2 class="mt-3 font-heading text-4xl leading-tight text-saffron sm:text-5xl">Low Visibility.<br />High Intent.</h2>
-          <p class="mt-4 text-sm font-semibold leading-7 text-cream-400">Future access points unlock quietly through drops, not noise. For now, the cleanest line into the network still runs through WhatsApp.</p>
-          <a href="https://wa.me/919259894495?text=I%20want%20to%20Catch%20the%20Drop.%20Send%20the%20menu%21" target="_blank" rel="noopener noreferrer" class="btn-transition mt-6 inline-flex w-full justify-center rounded-[8px] border border-firefly/30 px-5 py-4 text-center text-sm font-bold uppercase tracking-[0.12em] text-firefly hover:bg-night-600 hover:border-firefly/50 sm:w-auto">Ping on WhatsApp</a>
+          <p class="mt-4 text-sm font-semibold leading-7 dark:text-cream-400 text-brown-500">Future access points unlock quietly through drops, not noise. For now, the cleanest line into the network still runs through WhatsApp.</p>
+          <a href="https://wa.me/919259894495?text=I%20want%20to%20Catch%20the%20Drop.%20Send%20the%20menu%21" target="_blank" rel="noopener noreferrer" class="btn-transition mt-6 inline-flex w-full justify-center rounded-[8px] border dark:border-firefly/30 border-firefly-700/30 px-5 py-4 text-center text-sm font-bold uppercase tracking-[0.12em] dark:text-firefly text-firefly-700 dark:hover:bg-night-600 hover:bg-cream-300 dark:hover:border-firefly/50 hover:border-firefly-700/50 sm:w-auto">Ping on WhatsApp</a>
         </div>
 
       </div>
@@ -294,25 +327,33 @@
 
   </main>
 
-  <footer class="border-t border-night-700/60 bg-night-800 pb-28">
-    <div class="mx-auto max-w-6xl px-6 py-12 text-center sm:px-8">
-      <img src="assets/images/logos/stamp-white.svg" alt="Nivedhya11 Hospitality Private Limited white verification stamp" class="mx-auto h-20 w-auto opacity-90" loading="lazy" />
-      <p class="mt-4 text-sm font-bold leading-7 text-cream-200">Nivedhya11 Hospitality Private Limited</p>
-      <p class="mt-2 text-sm font-semibold leading-7 text-cream-400">Origin: Bharat &nbsp;&middot;&nbsp; Direct-to-Consumer Network</p>
-      <p class="mt-2 text-sm font-semibold leading-7 text-cream-500">Boba Bear is a global lifestyle brand. Our current collections are optimized for digital delivery.</p>
-      <div class="mt-6 flex justify-center gap-4 text-sm font-bold text-firefly">
-        <a href="privacy.html" class="underline decoration-firefly/35 underline-offset-4 transition-colors hover:decoration-firefly/70">Privacy Policy</a>
-        <span class="text-night-400">&middot;</span>
-        <a href="terms.html" class="underline decoration-firefly/35 underline-offset-4 transition-colors hover:decoration-firefly/70">Terms of Service</a>
+  <footer class="border-t dark:border-night-700/60 border-cream-300/60 dark:bg-night-800 bg-cream-200 pb-28">
+    <div class="mx-auto max-w-[1280px] px-6 py-12 text-center sm:px-8 lg:px-12">
+      <img src="assets/images/logos/stamp-white.svg" alt="Nivedhya11 Hospitality Private Limited verification stamp" class="stamp-dark mx-auto h-20 w-auto opacity-90" loading="lazy" />
+      <img src="assets/images/logos/logo-full.svg" alt="Boba Bear logo" class="stamp-light mx-auto h-12 w-auto opacity-75" loading="lazy" />
+      <p class="mt-4 text-sm font-bold leading-7 dark:text-cream-200 text-brown-800">Nivedhya11 Hospitality Private Limited</p>
+      <p class="mt-2 text-sm font-semibold leading-7 dark:text-cream-400 text-brown-500">Origin: Bharat &nbsp;&middot;&nbsp; Direct-to-Consumer Network</p>
+      <p class="mt-2 text-sm font-semibold leading-7 dark:text-cream-500 text-brown-400">Boba Bear is a global lifestyle brand. Our current collections are optimized for digital delivery.</p>
+      <div class="mt-6 flex justify-center gap-4 text-sm font-bold dark:text-firefly text-firefly-700">
+        <a href="privacy.html" class="underline dark:decoration-firefly/35 decoration-firefly-700/35 underline-offset-4 transition-colors dark:hover:decoration-firefly/70 hover:decoration-firefly-700/70">Privacy Policy</a>
+        <span class="dark:text-night-400 text-brown-300">&middot;</span>
+        <a href="terms.html" class="underline dark:decoration-firefly/35 decoration-firefly-700/35 underline-offset-4 transition-colors dark:hover:decoration-firefly/70 hover:decoration-firefly-700/70">Terms of Service</a>
       </div>
-      <p class="mt-6 text-[11px] font-semibold tracking-[0.06em] text-night-400">&copy; 2026 NIVEDHYA11 HOSPITALITY PRIVATE LIMITED. All rights reserved.</p>
+      <p class="mt-6 text-[11px] font-semibold tracking-[0.06em] dark:text-night-400 text-brown-300">&copy; 2026 NIVEDHYA11 HOSPITALITY PRIVATE LIMITED. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- Mobile sticky bar — buttons injected by assets/js/content.js from PLATFORMS config -->
-  <div class="fixed inset-x-0 bottom-0 z-50 border-t border-night-700/60 bg-night-800/95 px-3 py-3 backdrop-blur-xl md:hidden">
-    <div id="mobile-platform-bar" class="mx-auto grid max-w-6xl grid-cols-3 gap-2"></div>
+  <!-- Mobile sticky bar -->
+  <div class="fixed inset-x-0 bottom-0 z-50 border-t dark:border-night-700/60 border-cream-300/60 dark:bg-night-800/95 bg-cream-100/95 px-3 py-3 backdrop-blur-xl md:hidden">
+    <div id="mobile-platform-bar" class="mx-auto grid max-w-[1280px] grid-cols-3 gap-2"></div>
   </div>
+
+  <script>
+    document.getElementById('theme-toggle').addEventListener('click', function () {
+      var isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('bb-theme', isDark ? 'dark' : 'light');
+    });
+  </script>
 
   <script src="assets/js/content.js"></script>
 </body>
