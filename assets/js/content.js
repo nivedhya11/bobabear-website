@@ -72,7 +72,7 @@ const PLATFORMS = [
 
 function renderShowcaseGrid() {
   var el = document.getElementById('showcase-grid');
-  if (!el) return;
+  if (!el || el.children.length) return;
 
   el.innerHTML = SHOWCASE.map(function (item) {
     var imageArea = item.image
@@ -96,7 +96,7 @@ function renderShowcaseGrid() {
 
 function renderPlatformButtons() {
   var el = document.getElementById('platform-buttons');
-  if (!el) return;
+  if (!el || el.children.length) return;
 
   el.innerHTML = PLATFORMS.map(function (p) {
     return (
