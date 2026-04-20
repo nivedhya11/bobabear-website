@@ -16,28 +16,28 @@ const SHOWCASE = [
     name: 'Purple Rain Taro Boba',
     category: 'Signature Sip',
     description: 'Creamy taro boba with a rich purple blend and chewy tapioca pearls.',
-    image: 'assets/images/products/purple-rain-matcha.png',
+    image: 'assets/images/products/purple-rain-taro.png',
     auroraHex: '#D4BEF5', // aurora-lavender
   },
   {
     name: 'Gangnam Iced Coffee Boba',
     category: 'Coffee Drop',
     description: 'Creamy iced coffee with chewy boba and chocolate-lined cup walls.',
-    image: null,
+    image: 'assets/images/products/gangnam-iced-coffee-boba.png',
     auroraHex: '#FAC9A8', // aurora-peach
   },
   {
     name: 'Zen Master Matcha Boba',
     category: 'Matcha Drop',
     description: 'Premium matcha blended with milk, dark chocolate, and chewy boba.',
-    image: null,
+    image: 'assets/images/products/zen-master-matcha-boba.png',
     auroraHex: '#B8F0C4', // aurora-mint
   },
   {
     name: 'Spicy Carbonara Ramyun',
     category: 'K-Street Bites',
     description: 'Creamy, spicy dry-stir ramyun finished with sesame and spring onion.',
-    image: null,
+    image: 'assets/images/products/spicy-carbonara-ramyun.png',
     auroraHex: '#F9C4CC', // aurora-rose
   },
 ];
@@ -55,8 +55,8 @@ const PLATFORMS = [
   {
     id: 'zomato',
     url: 'https://link.zomato.com/xqzv/rshare?id=12538351530563d18',
-    label: 'Access via Zomato',
-    shortLabel: 'Via Zomato',
+    label: 'Access Zomato Drop',
+    shortLabel: 'Zomato Drop',
     colorHex: '#E23744',
   },
   {
