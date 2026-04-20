@@ -111,7 +111,7 @@ function renderPlatformButtons() {
 
 function renderMobileBar() {
   var el = document.getElementById('mobile-platform-bar');
-  if (!el) return;
+  if (!el || el.children.length) return;
 
   el.innerHTML = PLATFORMS.map(function (p) {
     return (
