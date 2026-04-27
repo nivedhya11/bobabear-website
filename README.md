@@ -136,7 +136,7 @@ Only these 5 featured items appear on the homepage:
 
 Current external actions wired into the site:
 
-- **Swiggy:** `https://www.swiggy.com/direct/brand/741763?source=swiggy-direct&subSource=instagram`
+- **Swiggy:** `https://www.swiggy.com/direct/brand/730987?source=swiggy-direct&subSource=generic`
 - **Zomato:** `https://link.zomato.com/xqzv/rshare?id=12538351530563d18`
 - **WhatsApp:** `https://wa.me/919259894495?text=I%20want%20to%20Catch%20the%20Drop.%20Send%20the%20menu%21`
 

@@ -47,7 +47,7 @@ const SHOWCASE = [
 const PLATFORMS = [
   {
     id: 'swiggy',
-    url: 'https://www.swiggy.com/direct/brand/741763?source=swiggy-direct&subSource=instagram',
+    url: 'https://www.swiggy.com/direct/brand/730987?source=swiggy-direct&subSource=generic',
     label: 'Access Swiggy Drop',
     shortLabel: 'Swiggy Drop',
     colorHex: '#FC8019',
